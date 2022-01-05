@@ -1,0 +1,143 @@
+@import "colors";
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  width: 100%;
+  background: #353535;
+  font-family: "Titillium Web", sans-serif;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1500px;
+  padding: 0 7%;
+}
+
+nav {
+  width: 100%;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  background: #f7d332;
+  height: 90px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+nav ul {
+  width: 500px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  font-size: 24px;
+  color: #373737;
+  list-style-type: none;
+  line-height: 3.5;
+}
+
+.call-btn {
+  width: 180px;
+  height: 45px;
+  background: #373737;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  margin: auto 0;
+  border-radius: 5px;
+  p {
+    line-height: 2.3;
+  }
+}
+
+.logo {
+  width: 170px;
+  img {
+    width: 100%;
+  }
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  height: 500px;
+  margin-top: 50px;
+  img {
+    margin: auto 0;
+    height: 75%;
+  }
+}
+
+.hero-text {
+  margin: auto 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 250px;
+  color: #fff;
+  max-width: 500px;
+}
+
+.menu-btn {
+  background: red;
+  width: 180px;
+  height: 45px;
+  font-weight: 700;
+  font-size: 24px;
+  border-radius: 5px;
+  a {
+    display: block;
+    text-align: center;
+    line-height: 1.75;
+  }
+}
+
+/* Special offers */
+.special-offers {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  text-align: center;
+  h2 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 30px;
+    font-weight: 300;
+  }
+  img {
+    max-width: 330px;
+    margin-bottom: 20px;
+    margin-right: 40px;
+  }
+}
+
+.special-offers-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.special-offers_burger {
+  width: 100%;
+  margin: 0 20px;
+  :nth-child(4) {
+    background: #f7d332;
+    margin-top: 20px;
+  }
+  :nth-child(2) {
+    font-size: 30px;
+    font-weight: 300;
+  }
+}
