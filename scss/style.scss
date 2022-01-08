@@ -3,32 +3,45 @@
 * {
   padding: 0;
   margin: 0;
+  list-style-type: none;
+  text-decoration: none;
 }
 
 a {
-  text-decoration: none;
   color: inherit;
+}
+h2 {
+  font-family: "Titillium Web";
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 65px;
+  font-size: 2.25rem;
+  font-weight: 600;
+  color: $white-text;
 }
 
 body {
   width: 100%;
-  background: #353535;
-  font-family: "Titillium Web", sans-serif;
+  background: $background;
+  font-family: "Overpass", "Titillium Web", sans-serif;
+  color: $white-text;
 }
 
 .container {
   margin: 0 auto;
-  max-width: 1500px;
+  max-width: 1440px;
   padding: 0 7%;
 }
 
+// Navigation
 nav {
+  font-family: "Titillium Web";
   width: 100%;
-  padding: 0 40px;
   display: flex;
   justify-content: space-between;
-  background: #f7d332;
-  height: 90px;
+  background: #f7d33200;
+  height: 80px;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
 }
@@ -38,33 +51,112 @@ nav ul {
   display: flex;
   justify-content: space-between;
   font-weight: 700;
-  font-size: 24px;
-  color: #373737;
-  list-style-type: none;
-  line-height: 3.5;
-}
-
-.call-btn {
-  width: 180px;
-  height: 45px;
-  background: #373737;
-  text-align: center;
-  font-size: 18px;
-  font-weight: 700;
-  color: #fff;
-  margin: auto 0;
-  border-radius: 5px;
-  p {
-    line-height: 2.3;
+  color: $white-text;
+  font-size: 1.125rem;
+  li {
+    display: flex;
+  }
+  a {
+    margin: auto 0;
   }
 }
 
+.call-btn {
+  padding: 0.5rem 1rem;
+  background: $red-cta;
+  text-align: center;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: $white-text;
+  margin: auto 0;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
 .logo {
-  width: 170px;
+  padding-top: 10px;
+  margin: auto 0;
+  max-width: 110px;
   img {
     width: 100%;
   }
 }
+
+// Footer
+
+footer {
+  width: 100%;
+  height: 240px;
+  background: $yellow;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  color: $black-text;
+  display: flex;
+  margin-top: 145px;
+  h5 {
+    text-align: center;
+    display: unset;
+    width: 100%;
+    height: 25px;
+    font-size: 0.875rem;
+    font-weight: 400;
+    margin-top: 10px;
+  }
+  h3 {
+    font-size: 1.25rem;
+    font-weight: 400;
+  }
+  p {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+}
+
+.footer-container {
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  max-height: 200px;
+  flex-wrap: wrap;
+  :nth-of-type(2) {
+    p {
+      margin-bottom: 5px;
+      text-align: center;
+    }
+  }
+}
+
+.footer-container_box {
+  display: flex;
+  flex-direction: column;
+  max-width: 160px;
+  h3 {
+    margin-bottom: 20px;
+  }
+}
+
+.bot__info {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-footer {
+  max-width: 250px;
+  img {
+    width: 100%;
+  }
+}
+
+.footer-container_box__icons {
+  margin-top: 10px;
+  font-size: 0.85rem;
+  i {
+    margin-right: 10px;
+  }
+}
+
+// Hero
 
 .hero {
   display: flex;
@@ -82,22 +174,34 @@ nav ul {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 250px;
   color: #fff;
   max-width: 500px;
+  h1 {
+    font-size: 5rem;
+    line-height: 1.4;
+    font-family: "Titillium Web";
+  }
+  h3 {
+    margin-top: 25px;
+    font-size: 1.25rem;
+    font-weight: 400;
+  }
 }
 
 .menu-btn {
-  background: red;
+  display: flex;
+  background: $red-cta;
   width: 180px;
   height: 45px;
   font-weight: 700;
-  font-size: 24px;
+  font-size: 1.25rem;
   border-radius: 5px;
+  margin: 35px 0 15px 0;
   a {
-    display: block;
+    width: 100%;
+    height: 20px;
+    margin: auto 0;
     text-align: center;
-    line-height: 1.75;
   }
 }
 
@@ -106,20 +210,21 @@ nav ul {
   margin-top: 100px;
   display: flex;
   flex-direction: column;
-  color: #fff;
+  color: $white-text;
   text-align: center;
-  h2 {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    margin-bottom: 50px;
-    font-size: 30px;
-    font-weight: 300;
-  }
+
   img {
     max-width: 330px;
-    margin-bottom: 20px;
-    margin-right: 40px;
+    padding-right: 30px;
+  }
+  .menu-btn_special {
+    margin: 65px auto 0 auto;
+    a {
+      width: 100%;
+      height: 20px;
+      margin: auto 0;
+      text-align: center;
+    }
   }
 }
 
@@ -130,14 +235,201 @@ nav ul {
 }
 
 .special-offers_burger {
+  max-width: 360px;
   width: 100%;
-  margin: 0 20px;
-  :nth-child(4) {
-    background: #f7d332;
+  h4 {
+    font-family: "Titillium Web";
+    margin-top: 35px;
+    font-size: 1.875rem;
+    font-weight: 500;
+  }
+  p {
     margin-top: 20px;
+    font-size: 1.125rem;
+    font-weight: 400;
+  }
+}
+
+.price-container {
+  margin-top: 35px;
+  display: flex;
+  justify-content: space-evenly;
+  p {
+    font-size: 1.125rem;
+    margin: auto 20px;
+    font-weight: 300;
+  }
+}
+
+.price-icon {
+  width: 140px;
+  height: 50px;
+  color: $black-text;
+  font-size: 1.875rem;
+  background: url("../images/Rectangle\ 71.svg");
+  line-height: 1.8;
+  font-style: unset;
+}
+
+// Opening hours
+
+.opening-hours {
+  margin-top: 140px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 270px;
+  background: $secondary-background;
+  border-radius: 15px;
+  color: $white-text;
+
+  h2 {
+    font-size: 2.25rem;
+    margin: 45px auto;
+  }
+  .hours-container {
+    display: flex;
+    justify-content: space-around;
+    :nth-child(1) {
+      font-size: 2.25rem;
+    }
+    :nth-child(2) {
+      font-size: 1.5rem;
+    }
+  }
+  .hours {
+    text-align: center;
+  }
+}
+
+// Selling points
+
+.selling-points {
+  margin-top: 145px;
+  width: 100%;
+  height: 440px;
+}
+
+.selling-points-container {
+  margin-top: 150px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  :nth-of-type(2) {
+    img {
+      max-width: 300px !important;
+    }
+  }
+}
+.selling-point_box {
+  display: flex;
+  flex-direction: column;
+  background: $secondary-background;
+  max-width: 370px;
+  height: 210px;
+  border-radius: 5px;
+
+  img {
+    position: relative;
+    top: -100px;
+    max-width: 180px;
+    margin: 0 auto;
+  }
+  p {
+    position: relative;
+    top: -110px;
+    padding: 0 10%;
+    font-size: 1.125rem;
+  }
+}
+
+// Reviews slides
+
+.reviews {
+  margin-top: 145px;
+
+  height: 315px;
+  background: $secondary-background;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  h2 {
+    margin-top: 55px;
+    margin-bottom: 0;
+    width: 100%;
+  }
+  :last-child {
+    text-align: center;
+  }
+}
+
+.reviews-container {
+  i {
+    color: $yellow;
+  }
+}
+
+.reviews-container {
+  width: 90%;
+  height: 160px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.review {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  max-width: 650px;
+
+  p {
+    font-size: 1.125rem;
+    font-weight: 300;
+  }
+  :nth-of-type(2) {
+    margin-top: 20px;
+    font-weight: 600;
+    color: $white-text !important;
+  }
+}
+
+// Adress & map
+
+.adress-map {
+  margin-top: 145px;
+  height: 425px;
+  display: flex;
+  justify-content: space-between;
+  iframe {
+    height: 100%;
+    border-radius: 15px;
+  }
+}
+
+.adress-map_left {
+  display: flex;
+  flex-direction: column;
+  max-width: 465px;
+  font-size: 1.125rem;
+  h2 {
+    text-align: left;
+  }
+  :nth-child(1) {
+    margin-bottom: 25px;
   }
   :nth-child(2) {
-    font-size: 30px;
-    font-weight: 300;
+    margin-bottom: 50px;
+  }
+  :nth-child(3) {
+    margin-bottom: 35px;
+  }
+  :nth-child(4) {
+    margin-bottom: 35px;
+  }
+  :nth-child(5) {
+    color: $red-cta;
+    text-decoration: underline;
   }
 }
