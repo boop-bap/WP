@@ -18,7 +18,7 @@
                     <li><a href="<?php echo site_url('/contact')?>">Contact</a></li>
                 </ul>
                 <div class="call-btn">
-                    <p>Ordr now</p>
+                    <p>ORDERING OPTIONS</p>
                 </div>
             </nav>
         </header>
