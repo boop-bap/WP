@@ -57,7 +57,7 @@
 
 
         <section class="opening-hours">
-            <h2>OPENING HOURS</h2>
+            <h2>EVERYTIME OPEN</h2>
             <div class="hours-container">
                 <div class="hours">
                     <p>12 - 21</p>
