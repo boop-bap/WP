@@ -126,7 +126,7 @@
                 <p>VED STRANDEN 11B
                     9000, AALBORG</p>
                 <p>+45 12 34 56 78</p>
-                <a href="https://goo.gl/maps/igmxjks1J8w14n2v5">GET DIRECTIONS</a>
+                <a href="https://goo.gl/maps/igmxjks1J8w14n2v5" target="_blank">GET DIRECTIONS</a>
             </div>
             <div class="adress-map_right">
                 <iframe

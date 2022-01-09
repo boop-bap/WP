@@ -30,12 +30,20 @@ body {
   background: #363636;
   font-family: "Overpass", "Titillium Web", sans-serif;
   color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .container {
   margin: 0 auto;
   max-width: 1440px;
   padding: 0 7%;
+  width: 100%;
+}
+
+header {
+  margin-bottom: 50px;
 }
 
 nav {
@@ -200,7 +208,6 @@ footer p {
       -ms-flex-pack: justify;
           justify-content: space-between;
   height: 500px;
-  margin-top: 50px;
 }
 
 .hero img {
@@ -340,6 +347,24 @@ footer p {
   font-style: unset;
 }
 
+.price-icon_secondary {
+  width: 138px;
+  height: 51px !important;
+  color: #353535;
+  font-size: 1.25rem;
+  background: url("../images/price-second.svg");
+  line-height: 1.4;
+  color: #fff;
+  font-style: unset;
+  text-align: center;
+  font-weight: 300;
+}
+
+.price-icon_extra {
+  font-size: 1.5rem;
+  line-height: 2.2;
+}
+
 .opening-hours {
   margin-top: 140px;
   display: -webkit-box;
@@ -390,9 +415,12 @@ footer p {
 .selling-points-container {
   margin-top: 150px;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -webkit-column-gap: 30px;
+          column-gap: 30px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -549,5 +577,49 @@ footer p {
 .adress-map_left :nth-child(5) {
   color: #da4040;
   text-decoration: underline;
+}
+
+.burger-menu h1 {
+  text-align: center;
+  margin-bottom: 45px;
+  font-size: 2.25rem;
+}
+
+.burger-menu h4 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.burger-menu-container {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  gap: 2rem;
+  row-gap: 5rem;
+}
+
+.burger-menu_item {
+  max-width: 365px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.burger-menu_item img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.burger-menu_item div {
+  margin: 0;
+}
+
+.burger-menu_item i {
+  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */
