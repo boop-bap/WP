@@ -17,7 +17,7 @@
 
 
         <section class="special-offers">
-            <h2>VERY SPECIAL DEALS</h2>
+            <h2>SPECIAL DEALS</h2>
             <div class="special-offers-container">
                 <a href='' class="special-offers_burger">
                     <img src=<?php echo get_theme_file_uri('./images/burger.png') ?> alt="special offer burger">
