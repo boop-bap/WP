@@ -26,15 +26,22 @@ body {
   background: $background;
   font-family: "Overpass", "Titillium Web", sans-serif;
   color: $white-text;
+  display: flex;
 }
 
 .container {
   margin: 0 auto;
   max-width: 1440px;
   padding: 0 7%;
+  width: 100%;
 }
 
 // Navigation
+
+header {
+  margin-bottom: 50px;
+}
+
 nav {
   font-family: "Titillium Web";
   width: 100%;
@@ -156,13 +163,14 @@ footer {
   }
 }
 
+// Main page --------
+
 // Hero
 
 .hero {
   display: flex;
   justify-content: space-between;
   height: 500px;
-  margin-top: 50px;
   img {
     margin: auto 0;
     height: 75%;
@@ -271,6 +279,24 @@ footer {
   font-style: unset;
 }
 
+.price-icon_secondary {
+  width: 138px;
+  height: 51px !important;
+  color: $black-text;
+  font-size: 1.25rem;
+  background: url("../images/price-second.svg");
+  line-height: 1.4;
+  color: $white-text;
+  font-style: unset;
+  text-align: center;
+  font-weight: 300;
+}
+
+.price-icon_extra {
+  font-size: 1.5rem;
+  line-height: 2.2;
+}
+
 // Opening hours
 
 .opening-hours {
@@ -313,7 +339,9 @@ footer {
 .selling-points-container {
   margin-top: 150px;
   width: 100%;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 30px;
   justify-content: space-between;
   flex-direction: row;
   :nth-of-type(2) {
@@ -431,5 +459,48 @@ footer {
   :nth-child(5) {
     color: $red-cta;
     text-decoration: underline;
+  }
+}
+
+// Menu --------
+
+// Burger menus
+
+.burger-menu {
+  h1 {
+    text-align: center;
+    margin-bottom: 45px;
+    font-size: 2.25rem;
+  }
+  h4 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: center;
+    margin: 20px 0;
+  }
+}
+
+.burger-menu-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: space-around;
+  gap: 2rem;
+  row-gap: 5rem;
+}
+
+.burger-menu_item {
+  max-width: 365px;
+  border-radius: 5px;
+  overflow: hidden;
+  img {
+    width: 100%;
+    border-radius: 5px;
+  }
+  div {
+    margin: 0;
+  }
+  i {
+    text-align: center;
   }
 }
