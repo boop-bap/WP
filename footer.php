@@ -10,17 +10,7 @@
             </div>
         </div>
 
-        <div class="footer-container_box">
-            <h3>OPENING HOURS</h3>
-            <p>Mon - Thu 6-21</p>
-
-            <p>Fri 6-21</p>
-
-            <p>Sat 6-21</p>
-
-            <p>Sun 12-21</p>
-
-        </div>
+        
 
         <div class="footer-container_box">
             <h3>LINKS</h3>
