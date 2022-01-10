@@ -491,6 +491,7 @@ footer {
   justify-content: space-around;
   gap: 2rem;
   row-gap: 5rem;
+  align-content: center;
 }
 
 .burger-menu_item {
@@ -510,19 +511,26 @@ footer {
 }
 
 //Single page
-
-.back-home {
-  float: left;
+.back-home{
+  display: grid;
+  grid-template-columns: 30px 150px;
+  margin-left: 15vw;
+  margin-bottom: 20px;
+  align-items: center;
+  i{
+    font-size: 30px;
+    
+  }
 }
-
 .product-card {
   display: grid;
   background-color: $secondary-background;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.664);
   border-radius: 15px;
-  grid-template-columns: 45% 55%;
-  width: 60vw;
+  grid-template-columns: 50% 50%;
+  width: 55vw;
   height: auto;
+  margin-left: 15vw;
   img {
     grid-column: 1;
     border-radius: 15px 0 0 15px;
@@ -536,12 +544,12 @@ footer {
     padding: 10px 10px 10px 20px ;
   }
   h1 {
-    //justify-self: center;
-    margin-top: 20px;
+    margin-top: 10px;
     font-family: "Titillium Web";
   }
   .prices {
-      margin-top: 35px;
+    height: 65%;
+      margin-top: 0px;
       display: flex;
       justify-content: space-evenly;
       p {
@@ -558,7 +566,7 @@ footer {
       }
       .price-icon_secondary{
         width: 30%;
-        line-height: 1.2;
+        line-height: 1.1;
       }
       i {
         text-align: center;
@@ -566,9 +574,24 @@ footer {
   }
 }
 
+.product-item {
+  display: grid;
+  grid-template-rows: 3;
+  justify-items: center;
+  i {
+    grid-row: 3;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  h4 {
+    margin: 0 0 20px 0;
+  }
+}
+
 .horizonal {
   margin-top:10vh;
   border: 2px solid $yellow;
+  margin-bottom: 20px;
 }
 
 .add-options {
@@ -576,22 +599,109 @@ footer {
   display: grid;
   grid-template-rows: 2;
   grid-template-columns: 3;
+  align-content: center;
   i{
     text-align: center;
+  }
+  h4{
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    margin-top: 10px;
   }
   .item1{
     grid-column: 1;
     display: grid;
+    justify-items: center;
     grid-template-rows: 3;
+    max-width: 365px;
+    border-radius: 5px;
+    overflow: hidden;
+    
   }
   .item2{
     grid-column: 2;
+    max-width: 365px;
+    border-radius: 5px;
+    overflow: hidden;
+    display: grid;
+    justify-items: center;
+      img {
+        width: 60%;
+    }
   }
   .item3{
     grid-column: 3;
+    max-width: 365px;
+  border-radius: 5px;
+  overflow: hidden;
+  display: grid;
+    justify-items: center
   }
   h2 {
     grid-column-start: 1;
     grid-column-end: 4;
   }
+  img {
+    width: 100%;
+    border-radius: 5px;
+  }
+}
+
+// CONTACT PAGE
+
+.contact-page {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 6% 9% 20% 65%;
+  height: 100%;
+  width: 100%;
+  row-gap: 20px;
+  iframe {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row: 4;
+    margin-top: 40px;
+  }
+  h1{
+    font-size: 4rem;
+    line-height: 1.4;
+    font-family: "Titillium Web";
+  }
+}
+
+.contact-intro {
+  grid-row: 2;
+  grid-column: 2;
+  justify-self: center;
+  width: 150%;
+  p {
+    text-align: center;
+    margin-top: 20px;
+  }
+}
+.contact-info {
+  grid-column: 1;
+  justify-self: end;
+  text-align: center;
+  grid-row: 3;
+  margin-left: 20%;
+  .directions {
+    color: $red-cta;
+    text-decoration: underline;
+  }
+}
+
+.vertical {
+  height: 200px;
+  width: 1px;
+  border: 1px solid $yellow;
+  grid-column: 2;
+  grid-row: 3;
+  justify-self: center;
+}
+
+.contact-hours {
+  justify-self: start;
+  text-align: center;
+  grid-row: 3;
 }
