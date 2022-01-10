@@ -4,22 +4,25 @@
 <?php get_header(); ?>
 
 <body>
-    <a href="#">
+    <a href="<?php echo site_url('/menu')?>">
         <div class="back-home">
             <i class="fas fa-chevron-left">Back to home</i>
         </div>
     </a>
 
     <div class="product-card">
-        <img src=<?php echo get_theme_file_uri('./images/burger1.jpg') ?> alt="burger menu item">
-        <h1>THE SPECIAL MENU</h1>
-        <div class="desc">
-            <p>Some long desc whivh will be placed from wordpress. Some long desc whivh will be placed from wordpress.
-                Some long desc whivh will be placed from wordpress.</p>
+        <img src=<?php the_field("product_photo"); ?> alt="burger menu item">
+        <h1><?php the_field("product_name"); ?></h1>
+        <div class="desc"><p><?php the_field("description"); ?></p></div>
+
+        <div class="ingredients">
+            <h3>Ingredients:</h3>
+            <p><?php the_field("desc"); ?></p>
+            
         </div>
         <div class="prices">
-            <i class="price-icon price-icon_extra ">99kr.-</i>
-            <i class="price-icon_secondary">54kr. <br> SINGLE</i>
+            <i class="price-icon price-icon_extra "><?php the_field("price"); ?> Kr.</i>
+            <i class="price-icon_secondary"><?php the_field("menu_price"); ?> Kr.<br> SINGLE</i>
             <p>GET 2 SINGLES ADD 40 Kr.</p>
         </div>
     </div>
