@@ -345,6 +345,8 @@ footer p {
   background: url("../images/Rectangle 71.svg");
   line-height: 1.8;
   font-style: unset;
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 
 .price-icon_secondary {
@@ -358,6 +360,8 @@ footer p {
   font-style: unset;
   text-align: center;
   font-weight: 300;
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
 
 .price-icon_extra {
@@ -621,5 +625,121 @@ footer p {
 
 .burger-menu_item i {
   text-align: center;
+}
+
+.back-home {
+  float: left;
+}
+
+.product-card {
+  display: -ms-grid;
+  display: grid;
+  background-color: #3d3d3d;
+  -webkit-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.664);
+          box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.664);
+  border-radius: 15px;
+  -ms-grid-columns: 45% 55%;
+      grid-template-columns: 45% 55%;
+  width: 60vw;
+  height: auto;
+}
+
+.product-card img {
+  -ms-grid-column: 1;
+  grid-column: 1;
+  border-radius: 15px 0 0 15px;
+  height: 100%;
+  width: 100%;
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+  grid-row-end: 4;
+}
+
+.product-card h1, .product-card .desc, .product-card .prices {
+  -ms-grid-column: 2;
+  grid-column: 2;
+  padding: 10px 10px 10px 20px;
+}
+
+.product-card h1 {
+  margin-top: 20px;
+  font-family: "Titillium Web";
+}
+
+.product-card .prices {
+  margin-top: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.product-card .prices p {
+  font-size: 0.9rem;
+  padding: 5px;
+  font-weight: 300;
+  text-align: center;
+  border: 1px solid #f7d332;
+  border-radius: 5px;
+  width: 120px;
+}
+
+.product-card .prices .price-icon {
+  width: 30%;
+}
+
+.product-card .prices .price-icon_secondary {
+  width: 30%;
+  line-height: 1.2;
+}
+
+.product-card .prices i {
+  text-align: center;
+}
+
+.horizonal {
+  margin-top: 10vh;
+  border: 2px solid #f7d332;
+}
+
+.add-options {
+  margin-top: 50px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 2;
+      grid-template-rows: 2;
+  -ms-grid-columns: 3;
+      grid-template-columns: 3;
+}
+
+.add-options i {
+  text-align: center;
+}
+
+.add-options .item1 {
+  -ms-grid-column: 1;
+  grid-column: 1;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 3;
+      grid-template-rows: 3;
+}
+
+.add-options .item2 {
+  -ms-grid-column: 2;
+  grid-column: 2;
+}
+
+.add-options .item3 {
+  -ms-grid-column: 3;
+  grid-column: 3;
+}
+
+.add-options h2 {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 4;
 }
 /*# sourceMappingURL=style.css.map */

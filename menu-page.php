@@ -8,7 +8,7 @@
         <section class="burger-menu">
             <h1>THE BURGER MENU</h1>
             <div class="burger-menu-container">
-                <a href="#" class="burger-menu_item">
+                <a href="<?php echo site_url('/single-product')?>" class="burger-menu_item">
                     <img src=<?php echo get_theme_file_uri('./images/burger1.jpg') ?> alt="burger menu item">
                     <h4>THE SPECIAL MENU</h4>
                     <div class="price-container">
