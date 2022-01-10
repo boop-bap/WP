@@ -380,8 +380,7 @@ footer {
 
 .reviews {
   margin-top: 145px;
-
-  height: 315px;
+  height: 365px;
   background: $secondary-background;
   display: flex;
   flex-direction: column;
@@ -397,17 +396,21 @@ footer {
 }
 
 .reviews-container {
-  i {
-    color: $yellow;
-  }
-}
-
-.reviews-container {
   width: 90%;
-  height: 160px;
+  height: 215px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+
+  p {
+    margin-top: 55px;
+  }
+
+  i {
+    color: $red-cta;
+    margin-top: 55px;
+  }
 }
 
 .review {
@@ -425,6 +428,42 @@ footer {
     font-weight: 600;
     color: $white-text !important;
   }
+}
+
+/* Slides */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+}
+
+/* The dot/bullet/indicator container */
+.dot-container {
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: $white-text;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle */
+.active,
+.dot:hover {
+  background-color: $red-cta;
 }
 
 // Adress & map
@@ -511,15 +550,14 @@ footer {
 }
 
 //Single page
-.back-home{
+.back-home {
   display: grid;
   grid-template-columns: 30px 150px;
   margin-left: 15vw;
   margin-bottom: 20px;
   align-items: center;
-  i{
+  i {
     font-size: 30px;
-    
   }
 }
 .product-card {
@@ -539,9 +577,11 @@ footer {
     grid-row-start: 1;
     grid-row-end: 4;
   }
-  h1, .desc, .prices{
+  h1,
+  .desc,
+  .prices {
     grid-column: 2;
-    padding: 10px 10px 10px 20px ;
+    padding: 10px 10px 10px 20px;
   }
   h1 {
     margin-top: 10px;
@@ -549,28 +589,28 @@ footer {
   }
   .prices {
     height: 65%;
-      margin-top: 0px;
-      display: flex;
-      justify-content: space-evenly;
-      p {
-        font-size: 0.9rem;
-        padding: 5px;
-        font-weight: 300;
-        text-align: center;
-        border: 1px solid $yellow;
-        border-radius: 5px;
-        width: 120px;
-      }
-      .price-icon {
-        width: 30%;
-      }
-      .price-icon_secondary{
-        width: 30%;
-        line-height: 1.1;
-      }
-      i {
-        text-align: center;
-      }
+    margin-top: 0px;
+    display: flex;
+    justify-content: space-evenly;
+    p {
+      font-size: 0.9rem;
+      padding: 5px;
+      font-weight: 300;
+      text-align: center;
+      border: 1px solid $yellow;
+      border-radius: 5px;
+      width: 120px;
+    }
+    .price-icon {
+      width: 30%;
+    }
+    .price-icon_secondary {
+      width: 30%;
+      line-height: 1.1;
+    }
+    i {
+      text-align: center;
+    }
   }
 }
 
@@ -589,7 +629,7 @@ footer {
 }
 
 .horizonal {
-  margin-top:10vh;
+  margin-top: 10vh;
   border: 2px solid $yellow;
   margin-bottom: 20px;
 }
@@ -600,15 +640,15 @@ footer {
   grid-template-rows: 2;
   grid-template-columns: 3;
   align-content: center;
-  i{
+  i {
     text-align: center;
   }
-  h4{
+  h4 {
     font-size: 1.5rem;
     margin-bottom: 15px;
     margin-top: 10px;
   }
-  .item1{
+  .item1 {
     grid-column: 1;
     display: grid;
     justify-items: center;
@@ -616,26 +656,25 @@ footer {
     max-width: 365px;
     border-radius: 5px;
     overflow: hidden;
-    
   }
-  .item2{
+  .item2 {
     grid-column: 2;
     max-width: 365px;
     border-radius: 5px;
     overflow: hidden;
     display: grid;
     justify-items: center;
-      img {
-        width: 60%;
+    img {
+      width: 60%;
     }
   }
-  .item3{
+  .item3 {
     grid-column: 3;
     max-width: 365px;
-  border-radius: 5px;
-  overflow: hidden;
-  display: grid;
-    justify-items: center
+    border-radius: 5px;
+    overflow: hidden;
+    display: grid;
+    justify-items: center;
   }
   h2 {
     grid-column-start: 1;
@@ -662,7 +701,7 @@ footer {
     grid-row: 4;
     margin-top: 40px;
   }
-  h1{
+  h1 {
     font-size: 4rem;
     line-height: 1.4;
     font-family: "Titillium Web";

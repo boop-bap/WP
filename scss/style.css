@@ -468,7 +468,7 @@ footer p {
 
 .reviews {
   margin-top: 145px;
-  height: 315px;
+  height: 365px;
   background: #3d3d3d;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -491,13 +491,9 @@ footer p {
   text-align: center;
 }
 
-.reviews-container i {
-  color: #f7d332;
-}
-
 .reviews-container {
   width: 90%;
-  height: 160px;
+  height: 215px;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -505,6 +501,17 @@ footer p {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.reviews-container p {
+  margin-top: 55px;
+}
+
+.reviews-container i {
+  color: #f54747;
+  margin-top: 55px;
 }
 
 .review {
@@ -528,6 +535,43 @@ footer p {
   margin-top: 20px;
   font-weight: 600;
   color: #fff !important;
+}
+
+/* Slides */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+}
+
+/* The dot/bullet/indicator container */
+.dot-container {
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: inline-block;
+  -webkit-transition: background-color 0.6s ease;
+  transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle */
+.active,
+.dot:hover {
+  background-color: #f54747;
 }
 
 .adress-map {
@@ -670,7 +714,9 @@ footer p {
   grid-row-end: 4;
 }
 
-.product-card h1, .product-card .desc, .product-card .prices {
+.product-card h1,
+.product-card .desc,
+.product-card .prices {
   -ms-grid-column: 2;
   grid-column: 2;
   padding: 10px 10px 10px 20px;
