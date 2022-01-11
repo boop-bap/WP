@@ -343,11 +343,9 @@ footer {
 .selling-points-container {
   margin-top: 150px;
   width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  column-gap: 30px;
+  height: 320px;
+  display: flex;
   justify-content: space-between;
-  flex-direction: row;
   :nth-of-type(2) {
     img {
       max-width: 300px !important;
@@ -355,10 +353,10 @@ footer {
   }
 }
 .selling-point_box {
+  max-width: 370px;
   display: flex;
   flex-direction: column;
   background: $secondary-background;
-  max-width: 370px;
   height: 210px;
   border-radius: 5px;
 
@@ -379,12 +377,14 @@ footer {
 // Reviews slides
 
 .reviews {
+  width: 100%;
   margin-top: 145px;
   height: 365px;
   background: $secondary-background;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  position: relative;
   h2 {
     margin-top: 55px;
     margin-bottom: 0;
@@ -396,12 +396,13 @@ footer {
 }
 
 .reviews-container {
-  width: 90%;
+  width: 100%;
   height: 215px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  overflow: hidden;
 
   p {
     margin-top: 55px;
@@ -430,41 +431,154 @@ footer {
   }
 }
 
-/* Slides */
-.mySlides {
+.hide-slide{
   display: none;
 }
 
-/* Next & previous buttons */
-.prev,
-.next {
-  cursor: pointer;
+
+
+// From medium
+//https://medium.com/@marcusmichaels/how-to-build-a-carousel-from-scratch-in-vanilla-js-9a096d3b98c9
+
+
+/* Parent wrapper to carousel. Width can be changed as needed. */
+.carousel-wrapper {
+  overflow: hidden;
+  width: 90%;
+  margin: auto;
 }
 
-/* The dot/bullet/indicator container */
-.dot-container {
-  text-align: center;
-  padding: 20px;
+/* Apply 'border-box' to 'box-sizing' so border and padding is included in the width and height. */
+.carousel-wrapper * {
+  box-sizing: border-box;
+}
+
+/* We'll be using the 'transform' property to move the carousel's items, so setting the 'transform-style' to 'preserve-3d' will make sure our nested elements are rendered properly in the 3D space. */
+.carousel {
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+/* By default we're hiding items (except the initial one) until the JS initiates. Elements are absolutely positioned with a width of 100% (as we're styling for mobile first), letting the content's height dictate the height of the carousel. Our magic property here for all our animation needs is 'transition', taking the properties we wish to animate 'transform' and 'opacity', along with the length of time in seconds. */
+.carousel__photo {
+  opacity: 0;
+  position: absolute;
+  top:0;
   width: 100%;
+  margin: auto;
+  padding: 1rem 4rem;
+  z-index: 100;
+  transition: transform .5s, opacity .5s, z-index .5s;
 }
 
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: $white-text;
+/* Display the initial item and bring it to the front using 'z-index'. These styles also apply to the 'active' item. */
+.carousel__photo.initial,
+.carousel__photo.active {
+  opacity: 1;
+  position: relative;
+  z-index: 900;
+}
+
+/* Set 'z-index' to sit behind our '.active' item. */
+.carousel__photo.prev,
+.carousel__photo.next {
+  z-index: 800;
+}
+
+/* Translate previous item to the left */
+.carousel__photo.prev {
+  transform: translateX(-100%);
+}
+
+/* Translate next item to the right */
+.carousel__photo.next {
+  transform: translateX(100%);
+}
+
+/* Style navigation buttons to sit in the middle, either side of the carousel. */
+.carousel__button--prev,
+.carousel__button--next {
+  position: absolute;
+  top:50%;
+  width: 3rem;
+  height: 3rem;
+  background-color: #FFF;
+  transform: translateY(-50%);
   border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
+  cursor: pointer; 
+  z-index: 1001; /* Sit on top of everything */
+  border:1px solid black;
+/*  opacity: 0;  Hide buttons until carousel is initialised 
+  transition:opacity 1s;*/
 }
 
-/* Add a background color to the active dot/circle */
-.active,
-.dot:hover {
-  background-color: $red-cta;
+.carousel__button--prev {
+  left:0;
 }
+
+.carousel__button--next {
+  right:0;
+}
+
+/* Use pseudo elements to insert arrows inside of navigation buttons */
+.carousel__button--prev::after,
+.carousel__button--next::after {
+  content: " ";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 50%;
+  left: 54%;
+  border-right: 2px solid $red-cta;
+  border-bottom: 2px solid $red-cta;
+  transform: translate(-50%, -50%) rotate(135deg);
+}
+
+.carousel__button--next::after {
+  left: 47%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+
+
+
+
+// /* Slides */
+// .mySlides {
+//   display: none;
+// }
+
+// /* Next & previous buttons */
+// .prev,
+// .next {
+//   cursor: pointer;
+// }
+
+// /* The dot/bullet/indicator container */
+// .dot-container {
+//   text-align: center;
+//   padding: 20px;
+//   width: 100%;
+// }
+
+// /* The dots/bullets/indicators */
+// .dot {
+//   cursor: pointer;
+//   height: 15px;
+//   width: 15px;
+//   margin: 0 2px;
+//   background-color: $white-text;
+//   border-radius: 50%;
+//   display: inline-block;
+//   transition: background-color 0.6s ease;
+// }
+
+// /* Add a background color to the active dot/circle */
+// .active,
+// .dot:hover {
+//   background-color: $red-cta;
+// }
 
 // Adress & map
 
@@ -744,3 +858,138 @@ footer {
   text-align: center;
   grid-row: 3;
 }
+
+// Drop down menu
+
+/* Dropdown Button */
+.dropbtn {
+  background-color: $red-cta;
+  color: $white-text;
+  height: 45px;
+  font-size: 1.125rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 0 15px;
+  margin: auto 0;
+}
+
+/* Dropdown button on hover & focus */
+
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: flex;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  width: 650px;
+  display: none;
+  position: absolute; 
+  background-color: #333333;
+  box-shadow: 0px 8px 16px 0px rgba(151, 151, 151, 0.2);
+  z-index: 1;
+  left: -435px;
+  top: 100px;
+  color: #fff6f6;
+}
+
+
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {
+  display: block;
+}
+
+.dropdown-container {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  height: 300px;
+}
+
+.dropdown-container_details {
+  grid-column: span 6;
+  width: 320px;
+  height: 130px;
+  margin: auto 0;
+  padding: 10% 5%;
+  display: grid;
+  text-align: center;
+  grid-template-columns: repeat(4, 1fr);
+  font-size: 1.5rem;
+  border-radius: 15px;
+
+  p{
+    border: rgb(255, 255, 255) 1px solid;
+    padding: 10px 0;
+
+  }
+  i {
+    border: rgb(255, 255, 255) 1px solid;
+
+  }
+  :nth-child(1){
+    font-size: 2.25rem;
+    grid-column: span 4;
+  }
+  :nth-child(2){
+    grid-column: span 2;
+  }
+  :nth-child(3){
+    grid-column: span 2;
+  }
+}
+
+
+.dropdown-container_divider {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  p {
+    font-size: 1.5rem;
+    
+  }
+}
+
+.dropdown-line {
+  height: 80px;
+  border:1px solid $white-text;
+  width: 0px;
+  margin-left: 10px;
+  grid-column: span 2;
+}
+
+.dropdown-container_services {
+  grid-column: span 3;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  img {
+    max-width: 140px;
+    max-height: 40px;
+  }
+}
+
+
+
+@media screen and (max-width: 1300px) {
+  body {
+    background-color: rgb(121, 121, 121);
+  }
+
+  // main page
+
+  .hero {
+
+  }
+  
+}
+
