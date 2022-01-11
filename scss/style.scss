@@ -178,7 +178,32 @@ footer {
   }
 }
 // SECONDARY NAVIGATION FOR MENU
-
+.secondary-nav {
+  position: fixed;
+  top: 100px;
+  right: 0;
+  height: 60vh;
+  display: grid;
+  grid-template-rows: 4;
+  justify-items: center;
+  align-items: center;
+  background-color: $secondary-background;
+  width: 5%;
+  padding: 10px;
+  border-radius: 15px 0 0 15px;
+  h5 {
+    font-size: 1rem;
+    justify-self: center;
+    width: 100%;
+  }
+  i {
+    font-size: 2rem;
+    justify-self: center;
+  }
+  .iconify {
+    font-size: 2.5rem;
+  }
+}
 // Main page --------
 
 // Hero
@@ -1108,7 +1133,41 @@ video {
 
 //main page
 
+.hero-text{
+  h1{
+    font-size: 2.5rem;
+  }
+}
+.burger-menu-container {
+  grid-template-columns: 1fr 1fr;
+}
+.burger-container {
+  grid-template-columns: 1fr 1fr;
+}
 
+.product-card {
+  width: 100%;
+  margin: 0;
+  .prices {
+    height: 70%;
+    p {
+      height: 70%;
+      margin-left: 20px;
+    }
+  }
+  p {
+    font-size: 0.8rem;
+  }
+  .price-icon {
+     width: 30%;
+     font-size: 1.3rem;
+  }
+  .price-icon_secondary {
+    width: 30%;
+    line-height: 0.9;
+    font-size: 1rem;
+  }
+}
 }
 
 
@@ -1131,7 +1190,58 @@ header {
  }
 }
 
-
+.product-card {
+  grid-template-columns: 100%;
+  grid-template-rows: 4;
+  width: 100%;
+  margin: 0;
+  h1 {
+    grid-row: 1;
+    grid-column: 1;
+    justify-self: center;
+  }
+  img {
+    grid-row: 2;
+    grid-column: 1;
+    margin: 0;
+    border-radius: 15px;
+    width: 95%;
+    justify-self: center;
+  }
+  .desc {
+    grid-row: 3;
+    grid-column: 1;
+    text-align: center;
+    padding: 20px;
+    width: 70%;
+    justify-self: center;
+    p{
+      font-size: 1rem;
+    }
+  }
+  .prices {
+    grid-row: 4;
+    grid-column: 1;
+    height: 70%;
+    padding: 20px;
+    p {
+      font-size: 1.1rem;
+    }
+  }
+  .price-icon {
+    font-size: 1.7rem;
+    display: flex;
+    justify-content: space-evenly;
+    width: 40%;
+  }
+  .price-icon_secondary {
+    display: flex;
+    justify-content: space-evenly;
+   line-height: 0.9;
+   font-size: 1.5rem;
+   width: 40%;
+  }
+  }
 }
 
 
