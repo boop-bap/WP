@@ -35,9 +35,11 @@ body {
   display: flex;
 }
 
+
 html {
   scroll-behavior: smooth;
 }
+
 
 .container {
   margin: 0 auto;
@@ -284,8 +286,10 @@ footer p {
       -ms-flex-align: center;
           align-items: center;
   background-color: #3d3d3d;
+
   opacity: 0.9;
   width: 70px;
+
   padding: 10px;
   border-radius: 15px 0 0 15px;
 }
@@ -307,6 +311,7 @@ footer p {
   font-size: 2.5rem;
 }
 
+
 .secondary-nav a {
   cursor: pointer;
   display: -ms-grid;
@@ -322,6 +327,7 @@ footer p {
   -ms-grid-column-align: center;
       justify-self: center;
 }
+
 
 .hero {
   display: -webkit-box;
@@ -384,8 +390,10 @@ footer p {
   font-size: 1.25rem;
   border-radius: 5px;
   margin: 35px 0 15px 0;
+
   -webkit-transition: 0.3s;
   transition: 0.3s;
+
 }
 
 .menu-btn a {
@@ -394,6 +402,7 @@ footer p {
   margin: auto 0;
   text-align: center;
 }
+
 
 .menu-btn:hover {
   -webkit-transition: 0.3s;
@@ -467,7 +476,9 @@ footer p {
 }
 
 .price-container {
-  margin-top: 20px;
+
+  margin-top: 35px;
+
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -861,6 +872,7 @@ footer p {
   font-size: 1.5rem;
   font-weight: 400;
   text-align: center;
+
   margin: 0;
 }
 
@@ -965,7 +977,7 @@ footer p {
   padding: 10px 10px 10px 20px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-}
+
 
 .product-card h1 {
   margin-top: 10px;
@@ -1012,8 +1024,10 @@ footer p {
   -ms-grid-rows: 3;
       grid-template-rows: 3;
   justify-items: center;
+
   -webkit-transition: 0.3s;
   transition: 0.3s;
+
 }
 
 .product-item i {
@@ -1031,12 +1045,14 @@ footer p {
   margin: 0 0 20px 0;
 }
 
+
 .product-item:hover {
   -webkit-transition: 0.3s;
   transition: 0.3s;
   -webkit-transform: scale(1.07);
           transform: scale(1.07);
 }
+
 
 .horizonal {
   margin-top: 10vh;
@@ -1293,6 +1309,7 @@ video {
   transition: 0.5s;
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
+
 }
 
 /* Dropdown button on hover & focus */
@@ -1625,7 +1642,9 @@ video {
     width: 40%;
   }
   .container {
+
     padding: 0 7%;
+
     margin: 0;
   }
 }
@@ -1649,6 +1668,7 @@ video {
     justify-items: center;
     row-gap: 3rem;
   }
+
   .add-options {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
@@ -1695,5 +1715,8 @@ video {
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
   }
+
+}
+
 }
 /*# sourceMappingURL=style.css.map */
