@@ -216,42 +216,6 @@ footer p {
   margin-right: 10px;
 }
 
-.secondary-nav {
-  position: fixed;
-  top: 100px;
-  right: 0;
-  height: 60vh;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: 4;
-      grid-template-rows: 4;
-  justify-items: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: #3d3d3d;
-  width: 5%;
-  padding: 10px;
-  border-radius: 15px 0 0 15px;
-}
-
-.secondary-nav h5 {
-  font-size: 1rem;
-  -ms-grid-column-align: center;
-      justify-self: center;
-  width: 100%;
-}
-
-.secondary-nav i {
-  font-size: 2rem;
-  -ms-grid-column-align: center;
-      justify-self: center;
-}
-
-.secondary-nav .iconify {
-  font-size: 2.5rem;
-}
-
 .hero {
   display: -webkit-box;
   display: -ms-flexbox;

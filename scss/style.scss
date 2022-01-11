@@ -178,32 +178,7 @@ footer {
   }
 }
 // SECONDARY NAVIGATION FOR MENU
-.secondary-nav {
-  position: fixed;
-  top: 100px;
-  right: 0;
-  height: 60vh;
-  display: grid;
-  grid-template-rows: 4;
-  justify-items: center;
-  align-items: center;
-  background-color: $secondary-background;
-  width: 5%;
-  padding: 10px;
-  border-radius: 15px 0 0 15px;
-  h5 {
-    font-size: 1rem;
-    justify-self: center;
-    width: 100%;
-  }
-  i {
-    font-size: 2rem;
-    justify-self: center;
-  }
-  .iconify {
-    font-size: 2.5rem;
-  }
-}
+
 // Main page --------
 
 // Hero
