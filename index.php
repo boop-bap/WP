@@ -20,44 +20,32 @@
 
         <section class="special-offers">
             <h2>SPECIAL DEALS</h2>
-            <div class="special-offers-container">
-                <a href='' class="special-offers_burger">
-                    <div class="special-offers_burger_img"> <img
-                            src=<?php echo get_theme_file_uri('./images/burger.png') ?> alt="special offer burger">
+            <?php $menuPosts = new WP_Query (array(
+            "post_per_page" => 2,
+            "category_name" => "offers"
+        ));
+        while ($menuPosts -> have_posts()) {
+            $menuPosts -> the_post(); 
+        
+         ?>
+            <div class="product-item burger-menu_item">
+                <a href="<?php the_permalink(); ?>">
+                    <img src="<?php the_field("product_photo")?>">
+                    <h4><?php the_field("product_name"); ?></h4>
+                    <div class="description">
+                        <p><?php the_field("description"); ?></p>
                     </div>
-                    <h4>2x the special</h4>
-                    <p>Cheese, bacon, 100% beef
-                        tomato, cheese, chili mayo, lettuce, onion, red onion, jalapeño, gravy, red peppers</p>
                     <div class="price-container">
-                        <i class="price-icon">99kr.-</i>
-                        <p>save 9kr.</p>
-                    </div>
-                </a>
-                <a href='' class="special-offers_burger">
-                    <div class="special-offers_burger_img"> <img
-                            src=<?php echo get_theme_file_uri('./images/burger.png') ?> alt="special offer burger">
-                    </div>
-                    <h4>2x the special</h4>
-                    <p>Cheese, bacon, 100% beef
-                        tomato, cheese, chili mayo, lettuce, onion, red onion, jalapeño, gravy, red peppers</p>
-                    <div class="price-container">
-                        <i class="price-icon">99kr.-</i>
-                        <p>save 9kr.</p>
-                    </div>
-                </a>
-                <a href='' class="special-offers_burger">
-                    <div class="special-offers_burger_img"> <img
-                            src=<?php echo get_theme_file_uri('./images/burger.png') ?> alt="special offer burger">
-                    </div>
-                    <h4>2x the special</h4>
-                    <p>Cheese, bacon, 100% beef
-                        tomato, cheese, chili mayo, lettuce, onion, red onion, jalapeño, gravy, red peppers</p>
-                    <div class="price-container">
-                        <i class="price-icon">99kr.-</i>
-                        <p>save 9kr.</p>
+                        <i class="price-icon price-icon_extra "><?php the_field("price"); ?> Kr.</i>
+                        <p>Save 15 Kr.</p>
+
                     </div>
                 </a>
             </div>
+
+
+            <?php } ?>
+
             <div class="menu-btn menu-btn_special">
                 <a href="<?php echo site_url('/menu')?>">SEE THE MENU</a>
             </div>
