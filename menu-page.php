@@ -4,19 +4,32 @@
 <?php get_header(); ?>
 
 <body>
-    <main>
     <div class="secondary-nav">
+            <div class="burgers">
+                <i class="fas fa-hamburger"></i>
+                <h5>BURGERS</h5>
+                
+            </div>
+            <div class="fires">
+                <i class="iconify" data-icon="ep:fries"></i>
+                <h5>FRIES</h5>
+                
+            </div>
+            <div class="dips">
+                <i class="iconify" data-icon="ep:fries"></i>
+                <h5>DIPS</h5>
+                
+            </div>
+            <div class="drinks">
+                <i class="iconify" data-icon="icon-park-outline:drink">Drinks</i>
+                <h5>DRINKS</h5>
+                
+            </div>
+        </div>
+    <main>
 
-<i class="fas fa-hamburger">Burgers</i>
-
-<span class="iconify" data-icon="ep:fries">Fries</span>
-
-<span class="iconify" data-icon="ep:fries">Dips</span>
-
-<span class="iconify" data-icon="icon-park-outline:drink">Drinks</span>
-
-</div>
-    <section class="burger-menu">
+        
+        <section class="burger-menu">
             <h1>THE BURGER MENU</h1>
             <div class="burger-container">
                 <?php $menuPosts = new WP_Query (array(
@@ -27,7 +40,7 @@
         
          ?>
                 <div class="product-item burger-menu_item">
-                <a href="<?php the_permalink(); ?>">
+                    <a href="<?php the_permalink(); ?>">
                         <img src="<?php the_field("product_photo")?>">
                         <h4><?php the_field("product_name"); ?></h4>
                         <div class="price-container">
@@ -62,7 +75,7 @@
         
          ?>
                 <div class="product-item burger-menu_item">
-                <a href="<?php the_permalink(); ?>">
+                    <a href="<?php the_permalink(); ?>">
                         <img src="<?php the_field("product_photo")?>">
                         <h4><?php the_field("product_name"); ?></h4>
                         <div class="price-container">
@@ -81,23 +94,23 @@
             <h1>SIDE DISHES</h1>
             <div class="burger-menu-container">
 
-            <?php $menuPosts = new WP_Query (array(
+                <?php $menuPosts = new WP_Query (array(
             "post_per_page" => 2,
             "category_name" => "side_dishes"
         ));
         while ($menuPosts -> have_posts()) {
             $menuPosts -> the_post(); 
         
-         ?>     <div class="product-item burger-menu_item">
-         <a href="<?php the_permalink(); ?>">
-                 <img src="<?php the_field("product_photo")?>">
-                 <h4><?php the_field("product_name"); ?></h4>
-                 <div class="price-container">
-                     <i class="price-icon price-icon_extra "><?php the_field("price"); ?> Kr.</i>
+         ?> <div class="product-item burger-menu_item">
+                    <a href="<?php the_permalink(); ?>">
+                        <img src="<?php the_field("product_photo")?>">
+                        <h4><?php the_field("product_name"); ?></h4>
+                        <div class="price-container">
+                            <i class="price-icon price-icon_extra "><?php the_field("price"); ?> Kr.</i>
 
-                 </div>
-             </a>
-         </div>
+                        </div>
+                    </a>
+                </div>
                 <?php } ?>
 
         </section>
@@ -116,7 +129,7 @@
         
          ?>
                 <div class="product-item burger-menu_item">
-                <a href="<?php the_permalink(); ?>">
+                    <a href="<?php the_permalink(); ?>">
                         <img src="<?php the_field("product_photo")?>">
                         <h4><?php the_field("product_name"); ?></h4>
                         <div class="price-container">
@@ -142,7 +155,7 @@
         
          ?>
                 <div class="product-item burger-menu_item">
-                <a href="<?php the_permalink(); ?>">
+                    <a href="<?php the_permalink(); ?>">
                         <img src="<?php the_field("product_photo")?>">
                         <h4><?php the_field("product_name"); ?></h4>
                         <div class="price-container">

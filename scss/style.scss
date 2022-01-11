@@ -177,7 +177,32 @@ footer {
     margin-right: 10px;
   }
 }
-
+// SECONDARY NAVIGATION FOR MENU
+.secondary-nav {
+  float: right;
+  height: 60vh;
+  display: grid;
+  grid-template-rows: 4;
+  justify-items: center;
+  align-items: center;
+  position: relative;
+  background-color: $secondary-background;
+  width: 5%;
+  padding: 10px;
+  border-radius: 15px 0 0 15px;
+  h5 {
+    font-size: 1rem;
+    justify-self: center;
+    width: 100%;
+  }
+  i {
+    font-size: 2rem;
+    justify-self: center;
+  }
+  .iconify {
+    font-size: 2.5rem;
+  }
+}
 // Main page --------
 
 // Hero
