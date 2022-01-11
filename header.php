@@ -48,12 +48,13 @@
                 <div class="mobile-nav">
                     <a href="<?php echo site_url('/')?>" class="logo"><img
                             src=<?php echo get_theme_file_uri('./images/logo.png') ?> alt="logo"></a>
-                    <ul>
+                    <ul class="mobile-ul hide">
                         <li><a href="<?php echo site_url('/')?>">Home</a></li>
                         <li><a href="<?php echo site_url('/menu')?>">Menu</a></li>
                         <li><a href="<?php echo site_url('/about-page')?>">About</a></li>
                         <li><a href="<?php echo site_url('/contact')?>">Contact</a></li>
                     </ul>
+                    <p class="hamburger">X</p>
                 </div>
             </nav>
         </header>
