@@ -179,13 +179,14 @@ footer {
 }
 // SECONDARY NAVIGATION FOR MENU
 .secondary-nav {
-  float: right;
+  position: fixed;
+  top: 100px;
+  right: 0;
   height: 60vh;
   display: grid;
   grid-template-rows: 4;
   justify-items: center;
   align-items: center;
-  position: relative;
   background-color: $secondary-background;
   width: 5%;
   padding: 10px;
@@ -1189,7 +1190,7 @@ header {
   grid-template-columns: 1fr;
   justify-items: center;
   row-gap: 3rem;
-}
+ }
 }
 
 

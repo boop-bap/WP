@@ -217,7 +217,9 @@ footer p {
 }
 
 .secondary-nav {
-  float: right;
+  position: fixed;
+  top: 100px;
+  right: 0;
   height: 60vh;
   display: -ms-grid;
   display: grid;
@@ -227,7 +229,6 @@ footer p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: relative;
   background-color: #3d3d3d;
   width: 5%;
   padding: 10px;

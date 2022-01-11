@@ -5,30 +5,30 @@
 
 <body>
     <div class="secondary-nav">
-            <div class="burgers">
-                <i class="fas fa-hamburger"></i>
-                <h5>BURGERS</h5>
-                
-            </div>
-            <div class="fires">
-                <i class="iconify" data-icon="ep:fries"></i>
-                <h5>FRIES</h5>
-                
-            </div>
-            <div class="dips">
-                <i class="iconify" data-icon="ep:fries"></i>
-                <h5>DIPS</h5>
-                
-            </div>
-            <div class="drinks">
-                <i class="iconify" data-icon="icon-park-outline:drink">Drinks</i>
-                <h5>DRINKS</h5>
-                
-            </div>
+        <div class="burgers">
+            <i class="fas fa-hamburger"></i>
+            <h5>BURGERS</h5>
+
         </div>
+        <div class="fires">
+            <i class="iconify" data-icon="ep:fries"></i>
+            <h5>FRIES</h5>
+
+        </div>
+        <div class="dips">
+            <i class="iconify" data-icon="ep:fries"></i>
+            <h5>DIPS</h5>
+
+        </div>
+        <div class="drinks">
+            <i class="iconify" data-icon="icon-park-outline:drink">Drinks</i>
+            <h5>DRINKS</h5>
+
+        </div>
+    </div>
     <main>
 
-        
+
         <section class="burger-menu">
             <h1>THE BURGER MENU</h1>
             <div class="burger-container">
