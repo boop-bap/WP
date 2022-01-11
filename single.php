@@ -20,7 +20,7 @@
         </div>
         <div class="prices">
             <i class="price-icon price-icon_extra "><?php the_field("price"); ?> Kr.</i>
-            <i class="price-icon_secondary"><?php the_field("menu_price"); ?> Kr.<br> SINGLE</i>
+            <i class="price-icon_secondary"><?php the_field("menu_price"); ?> Kr.<br> MENU</i>
             <p>GET 2 SINGLES ADD 40 Kr.</p>
         </div>
     </div>
@@ -30,7 +30,7 @@
         <img src=<?php the_field("menu_photo"); ?> alt="burger menu item">
         
         <div class="prices">
-            <i class="price-icon price-icon_extra "><?php the_field("price"); ?> Kr.</i>
+            <i class="price-icon price-icon_extra "><?php the_field("menu_price"); ?> Kr.</i>
         </div>
     </div>
 
@@ -75,7 +75,7 @@
                     <h4><?php the_field("product_name"); ?></h4>
                     <div class="price-container">
                         <i class="price-icon price-icon_extra "><?php the_field("price"); ?> Kr.</i>
-                        <i class="price-icon_secondary"><?php the_field("menu_price"); ?> Kr.<br> SINGLE</i>
+                        <i class="price-icon_secondary"><?php the_field("menu_price"); ?> Kr.<br> MENU</i>
 
                     </div>
                 
