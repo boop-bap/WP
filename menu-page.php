@@ -4,11 +4,13 @@
 <?php get_header(); ?>
 
 <body>
+    <div class="secondary-nav">
+    
+    </div>
     <main>
-
     <section class="burger-menu">
             <h1>THE BURGER MENU</h1>
-            <div class="burger-menu-container">
+            <div class="burger-container">
                 <?php $menuPosts = new WP_Query (array(
             "category_name" => "burgers"
         ));
