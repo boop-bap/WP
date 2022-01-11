@@ -1190,58 +1190,7 @@ header {
  }
 }
 
-.product-card {
-  grid-template-columns: 100%;
-  grid-template-rows: 4;
-  width: 100%;
-  margin: 0;
-  h1 {
-    grid-row: 1;
-    grid-column: 1;
-    justify-self: center;
-  }
-  img {
-    grid-row: 2;
-    grid-column: 1;
-    margin: 0;
-    border-radius: 15px;
-    width: 95%;
-    justify-self: center;
-  }
-  .desc {
-    grid-row: 3;
-    grid-column: 1;
-    text-align: center;
-    padding: 20px;
-    width: 70%;
-    justify-self: center;
-    p{
-      font-size: 1rem;
-    }
-  }
-  .prices {
-    grid-row: 4;
-    grid-column: 1;
-    height: 70%;
-    padding: 20px;
-    p {
-      font-size: 1.1rem;
-    }
-  }
-  .price-icon {
-    font-size: 1.7rem;
-    display: flex;
-    justify-content: space-evenly;
-    width: 40%;
-  }
-  .price-icon_secondary {
-    display: flex;
-    justify-content: space-evenly;
-   line-height: 0.9;
-   font-size: 1.5rem;
-   width: 40%;
-  }
-  }
+
 }
 
 
