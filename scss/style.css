@@ -1367,40 +1367,6 @@ video {
   .hero {
     height: unset;
   }
-  .hero-text h1 {
-    font-size: 2.5rem;
-  }
-  .burger-menu-container {
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-  }
-  .burger-container {
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-  }
-  .product-card {
-    width: 100%;
-    margin: 0;
-  }
-  .product-card .prices {
-    height: 70%;
-  }
-  .product-card .prices p {
-    height: 70%;
-    margin-left: 20px;
-  }
-  .product-card p {
-    font-size: 0.8rem;
-  }
-  .product-card .price-icon {
-    width: 30%;
-    font-size: 1.3rem;
-  }
-  .product-card .price-icon_secondary {
-    width: 30%;
-    line-height: 0.9;
-    font-size: 1rem;
-  }
 }
 
 @media screen and (max-width: 780px) {

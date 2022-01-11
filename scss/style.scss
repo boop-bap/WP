@@ -1133,41 +1133,7 @@ video {
 
 //main page
 
-.hero-text{
-  h1{
-    font-size: 2.5rem;
-  }
-}
-.burger-menu-container {
-  grid-template-columns: 1fr 1fr;
-}
-.burger-container {
-  grid-template-columns: 1fr 1fr;
-}
 
-.product-card {
-  width: 100%;
-  margin: 0;
-  .prices {
-    height: 70%;
-    p {
-      height: 70%;
-      margin-left: 20px;
-    }
-  }
-  p {
-    font-size: 0.8rem;
-  }
-  .price-icon {
-     width: 30%;
-     font-size: 1.3rem;
-  }
-  .price-icon_secondary {
-    width: 30%;
-    line-height: 0.9;
-    font-size: 1rem;
-  }
-}
 }
 
 
