@@ -71,8 +71,58 @@ header {
       -ms-flex-pack: justify;
           justify-content: space-between;
   background: #f7d33200;
+  position: relative;
+  border-radius: 0px  !important;
+}
+
+.mobile-nav p {
+  font-size: 2.5rem;
+  padding: 0 40px;
+}
+
+.mobile-nav ul {
+  padding: 30px 0 50px 0;
+  position: absolute;
+  top: 65px;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #f7d332;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
+  width: 100vw;
+  max-width: unset;
+  font-size: 1.875rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+  row-gap: 25px;
+}
+
+.mobile-nav ul li {
+  margin: 0 5%;
+  width: 120px;
+  margin: 0 auto;
+  color: #f7d332;
+  background: #363636;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+}
+
+.mobile-nav ul li a {
+  margin: 0 auto;
+}
+
+.hide {
+  display: none !important;
 }
 
 nav ul {
@@ -1354,14 +1404,35 @@ video {
   .hero {
     height: unset;
   }
-  .hero-text h1 {
+  .special-offers_burger {
+    max-width: 360px;
+    width: 100%;
+  }
+  .special-offers_burger img {
+    padding-right: 0px;
+  }
+  .special-offers_burger h4 {
+    font-family: "Titillium Web";
+    margin-top: 35px;
+    font-size: 1.875rem;
+    font-weight: 500;
+  }
+  .special-offers_burger p {
+    margin-top: 20px;
+    font-size: 0.875rem;
+    font-weight: 400;
+  }
+  .special-offers_burger .price-container p {
+    margin-left: 0;
+  }
+  .special-offers_burger .hero-text h1 {
     font-size: 2.5rem;
   }
-  .burger-menu-container {
+  .special-offers_burger .burger-menu-container {
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
   }
-  .burger-container {
+  .special-offers_burger .burger-container {
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
   }
@@ -1378,6 +1449,10 @@ video {
   }
   header .desktop-nav {
     display: none;
+  }
+  .container {
+    padding: 0;
+    margin: 0;
   }
 }
 

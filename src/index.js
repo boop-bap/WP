@@ -178,3 +178,24 @@ container.addEventListener('click',clickOutside)
 
 
 
+// hamburger
+
+const hambugerIcon = document.querySelector('.hamburger')
+const mobileMenu = document.querySelector('.mobile-ul') 
+
+console.log(mobileMenu)
+const toggleHamburger=(e)=>{
+
+  if (mobileMenu.classList.contains('hide')){
+    mobileMenu.classList.remove('hide')
+  } else {
+    mobileMenu.classList.add('hide')
+  }
+}
+
+
+hambugerIcon.addEventListener('click', toggleHamburger)
+
+
+
+
