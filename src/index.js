@@ -199,3 +199,12 @@ hambugerIcon.addEventListener('click', toggleHamburger)
 
 
 
+const wrapper = document.getElementById('hamburger-wrapper')
+
+wrapper.addEventListener("click", () => {
+  wrapper.classList.toggle("open")
+})
+
+
+
+

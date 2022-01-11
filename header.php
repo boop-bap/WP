@@ -54,7 +54,12 @@
                         <li><a href="<?php echo site_url('/about-page')?>">About</a></li>
                         <li><a href="<?php echo site_url('/contact')?>">Contact</a></li>
                     </ul>
-                    <p class="hamburger">X</p>
+
+
+                    <div id="hamburger-wrapper" class="hamburger">
+                        <p class="burger"></p>
+                    </div>
+
                 </div>
             </nav>
         </header>
