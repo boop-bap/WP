@@ -105,29 +105,29 @@
         <section class="reviews">
             <h2>A WORD FROM OUR CUSTOMERS</h2>
             <div class="reviews-container">
-                <I class="fas fa-chevron-left fa-2x  prev " onclick="plusSlides(-1) "></I>
-                <div class="mySlides review">
+                <I class="fas fa-chevron-left fa-2x chevron-left  prev " "></I>
+                <div class=" mySlides review">
                     <p>"Good choice if you need a simple but tasty burger quickly. Various selection, menu options, very
                         nice and friendly staff, with a quick service."</p>
                     <p>John Doe</p>
-                </div>
-                <div class="mySlides review">
-                    <p>"Bad choice if you need a simple but tasty burger quickly. Various selection, menu options, very
-                        nice and friendly staff, with a quick service."</p>
-                    <p>John Wick</p>
-                </div>
-                <div class="mySlides review">
-                    <p>"Average choice if you need a simple but tasty burger quickly. Various selection, menu options,
-                        very
-                        nice and friendly staff, with a quick service."</p>
-                    <p>Dora the explorer</p>
-                </div>
-                <I class="fas fa-chevron-right fa-2x next" onclick="plusSlides(1) "></I>
-                <div class="dot-container">
-                    <span class="dot" onclick="currentSlide(1)"></span>
-                    <span class="dot" onclick="currentSlide(2)"></span>
-                    <span class="dot" onclick="currentSlide(3)"></span>
-                </div>
+            </div>
+            <div class="mySlides review">
+                <p>"Bad choice if you need a simple but tasty burger quickly. Various selection, menu options, very
+                    nice and friendly staff, with a quick service."</p>
+                <p>John Wick</p>
+            </div>
+            <div class="mySlides review">
+                <p>"Average choice if you need a simple but tasty burger quickly. Various selection, menu options,
+                    very
+                    nice and friendly staff, with a quick service."</p>
+                <p>Dora the explorer</p>
+            </div>
+            <i class="fas fa-chevron-right chevron-right fa-2x next" onclick="plusSlides(1) "></i>
+            <div class="dot-container">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
             </div>
 
         </section>
