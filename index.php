@@ -4,7 +4,9 @@
 
     <main>
         <section class="hero">
-            <img src=<?php echo get_theme_file_uri('./images/burger.png') ?> alt="burger">
+            <div class="hero-image">
+                <img src=<?php echo get_theme_file_uri('./images/burger.png') ?> alt="burger">
+            </div>
             <div class="hero-text">
                 <h1>Delicious</br> burgers to <span>GO</span> </h1>
                 <h3>Pick up your take-away, dine in at <span>Ved Stranden 11B</span> or get it delivered with our
@@ -20,7 +22,9 @@
             <h2>SPECIAL DEALS</h2>
             <div class="special-offers-container">
                 <a href='' class="special-offers_burger">
-                    <img src=<?php echo get_theme_file_uri('./images/burger.png') ?> alt="special offer burger">
+                    <div class="special-offers_burger_img"> <img
+                            src=<?php echo get_theme_file_uri('./images/burger.png') ?> alt="special offer burger">
+                    </div>
                     <h4>2x the special</h4>
                     <p>Cheese, bacon, 100% beef
                         tomato, cheese, chili mayo, lettuce, onion, red onion, jalapeño, gravy, red peppers</p>
@@ -30,7 +34,9 @@
                     </div>
                 </a>
                 <a href='' class="special-offers_burger">
-                    <img src=<?php echo get_theme_file_uri('./images/burger.png') ?> alt="special offer burger">
+                    <div class="special-offers_burger_img"> <img
+                            src=<?php echo get_theme_file_uri('./images/burger.png') ?> alt="special offer burger">
+                    </div>
                     <h4>2x the special</h4>
                     <p>Cheese, bacon, 100% beef
                         tomato, cheese, chili mayo, lettuce, onion, red onion, jalapeño, gravy, red peppers</p>
@@ -40,7 +46,9 @@
                     </div>
                 </a>
                 <a href='' class="special-offers_burger">
-                    <img src=<?php echo get_theme_file_uri('./images/burger.png') ?> alt="special offer burger">
+                    <div class="special-offers_burger_img"> <img
+                            src=<?php echo get_theme_file_uri('./images/burger.png') ?> alt="special offer burger">
+                    </div>
                     <h4>2x the special</h4>
                     <p>Cheese, bacon, 100% beef
                         tomato, cheese, chili mayo, lettuce, onion, red onion, jalapeño, gravy, red peppers</p>
@@ -164,7 +172,7 @@
             <div class="adress-map_right">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2170.062453759092!2d9.918045315898109!3d57.05046989862971!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4649328c63bf7415%3A0x7c6478aac36f1a84!2sBurger%20GO!5e0!3m2!1sda!2sdk!4v1641657272732!5m2!1sda!2sdk"
-                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
 
 
