@@ -1200,13 +1200,13 @@ video {
 
 
 
-// Mobile 
+// Mobile page
 @media screen and (max-width: 780px) {
   body {
   background: rgb(92, 182, 119);
   }
 
-//main page
+//main page 
 
 header {
   background: $yellow;
@@ -1214,6 +1214,7 @@ header {
   border-bottom-right-radius:15px;
  .desktop-nav {
    display: none;
+
  }
 }
 .container {
