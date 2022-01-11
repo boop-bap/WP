@@ -44,9 +44,10 @@ body {
 
 header {
   margin-bottom: 50px;
+  height: 80px;
 }
 
-nav {
+.desktop-nav {
   font-family: "Titillium Web";
   width: 100%;
   display: -webkit-box;
@@ -56,13 +57,28 @@ nav {
       -ms-flex-pack: justify;
           justify-content: space-between;
   background: #f7d33200;
-  height: 80px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.mobile-nav {
+  font-family: "Titillium Web";
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: #f7d33200;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
 }
 
 nav ul {
-  width: 500px;
+  width: 50%;
+  min-width: 300px;
+  max-width: 500px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -210,9 +226,16 @@ footer p {
   height: 500px;
 }
 
-.hero img {
+.hero-image {
+  width: 45%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.hero-image img {
+  width: 100%;
   margin: auto 0;
-  height: 75%;
 }
 
 .hero-text {
@@ -228,7 +251,7 @@ footer p {
       -ms-flex-pack: justify;
           justify-content: space-between;
   color: #fff;
-  max-width: 500px;
+  width: 45%;
 }
 
 .hero-text h1 {
@@ -277,8 +300,12 @@ footer p {
   text-align: center;
 }
 
-.special-offers img {
+.special-offers .special-offers_burger_img {
   max-width: 330px;
+}
+
+.special-offers img {
+  width: 100%;
   padding-right: 30px;
 }
 
@@ -659,7 +686,13 @@ footer p {
 
 .adress-map iframe {
   height: 100%;
+  width: 100%;
   border-radius: 15px;
+}
+
+.adress-map_right {
+  max-width: 600px;
+  width: 100%;
 }
 
 .adress-map_left {
@@ -672,6 +705,7 @@ footer p {
           flex-direction: column;
   max-width: 465px;
   font-size: 1.125rem;
+  margin-right: 30px;
 }
 
 .adress-map_left h2 {
@@ -1048,7 +1082,6 @@ footer p {
   color: #fff6f6;
 }
 
-/* Change color of dropdown links on hover */
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {
   display: block;
@@ -1146,6 +1179,85 @@ footer p {
 @media screen and (max-width: 1300px) {
   body {
     background-color: #797979;
+  }
+  .hero-text h1 {
+    font-size: 4rem;
+  }
+  .selling-points-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    -webkit-column-gap: 1rem;
+            column-gap: 1rem;
+  }
+  .special-offers-container {
+    width: 100%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    -webkit-column-gap: 1rem;
+            column-gap: 1rem;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  body {
+    background: #8b7b5c;
+  }
+  .hero-text h1 {
+    font-size: 3rem;
+  }
+  .selling-point_box {
+    height: 280px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  body {
+    background: #8b7b5c;
+  }
+  .logo-footer {
+    display: none;
+  }
+  .hero {
+    height: unset;
+  }
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  body {
+    background: #5cb677;
+  }
+  header {
+    background: #f7d332;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+  header .desktop-nav {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 780px) {
+  .mobile-nav {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  body {
+    background: #8b7b5c;
+  }
+  .hero-text h1 {
+    font-size: 2.5rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
