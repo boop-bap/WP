@@ -405,19 +405,23 @@ footer {
     font-size: 2.25rem;
     margin: 45px auto;
   }
-  .hours-container {
-    display: flex;
-    justify-content: space-around;
-    :nth-child(1) {
-      font-size: 2.25rem;
-    }
-    :nth-child(2) {
-      font-size: 1.5rem;
-    }
+  
+  
+}
+
+.hours-container {
+  display: flex;
+  justify-content: space-around;
+  :nth-child(1) {
+    font-size: 2.25rem;
   }
-  .hours {
-    text-align: center;
+  :nth-child(2) {
+    font-size: 1.5rem;
   }
+}
+
+.hours {
+  text-align: center;
 }
 
 // Selling points
@@ -1101,9 +1105,7 @@ video {
 }
 
 @media screen and (max-width: 1300px) {
-  body {
-    background-color: rgb(121, 121, 121);
-  }
+ 
 
   // main page
 
@@ -1138,10 +1140,7 @@ video {
 }
 
 @media screen and (max-width: 1024px) {
-  body {
-  background: rgb(139, 123, 92);
-  }
-
+ 
 //main page
 
 .hero-text{
@@ -1157,10 +1156,7 @@ video {
 }
 
 @media screen and (max-width: 900px) {
-  body {
-  background: rgb(139, 123, 92);
-  }
-
+  
   .logo-footer{
     display: none;
   }
@@ -1251,8 +1247,15 @@ video {
 
 // Mobile 
 @media screen and (max-width: 780px) {
-  body {
-  background: rgb(92, 182, 119);
+  
+
+  .hide-on-mobile {
+    display: none;
+  }
+
+  h2{
+    font-size: 1.875rem;
+    font-weight: 400;
   }
 
 //main page
@@ -1324,9 +1327,109 @@ header {
   margin: 0;
 }
 
-
-
+.hero {
+  flex-direction: row-reverse;
+  h1 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 0.875rem;
+  }
 }
+
+.hero-text {
+  margin-left: 3%;
+}
+
+.menu-btn-mobile {
+  margin: 50px auto;
+  margin-bottom: 150px;
+  
+  display: flex;
+  background: unset;
+  a {
+    max-width: 180px;
+    margin: 0 auto;
+    background: $red-cta;
+    padding: 1rem;
+    border-radius: 5px;
+  }
+}
+
+.special-offers-container {
+  grid-template-columns: unset;
+  grid-template-rows: repeat(3,1fr);
+  justify-content: space-around;
+  row-gap: 100px;
+}
+
+
+.hours-container {
+max-height: unset;
+display: grid !important;
+grid-template-columns: 1fr 1fr;
+grid-template-rows: 1fr 1fr;
+row-gap: 20px;
+}
+
+.opening-hours {
+  height: unset;
+  padding-bottom: 100px;
+}
+
+.selling-points{
+  height: unset;
+}
+
+.selling-points-container {
+  display: grid;
+  grid-template-columns: unset;
+  grid-template-rows: repeat(3,1fr);
+  justify-content: space-around;
+  row-gap: 150px;
+  height: unset;
+  max-height: unset;
+  :nth-child(2) {
+    img {
+      margin-left: 30px;
+    }
+  }
+}
+
+
+.adress-map {
+  margin: 0 auto;
+  margin-top: 145px;
+  width: 100%;
+  height: unset;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  row-gap: 45px;
+  
+}
+
+.adress-map_left{
+  width: 90%;
+  margin: 0 auto;
+  max-width: unset;
+  h2 {
+    text-align: center;
+    margin-bottom: 50px !important;
+  }
+ 
+}
+}
+
+.adress-map_right{
+  width: 100%;
+  a {
+    text-align: center;
+  }
+  iframe {
+    width: 100vw;
+  }
+}
+
 
 
 
@@ -1340,6 +1443,10 @@ header {
  .mobile-nav {
    display: none;
  }
+
+ .hide-on-desktop{
+  display: none;
+ }
  
 
 }
@@ -1348,9 +1455,7 @@ header {
 
 
 @media screen and (max-width: 660px) {
-  body {
-  background: rgb(139, 123, 92);
-  }
+ 
 
 //main page
 
@@ -1405,3 +1510,93 @@ header {
 
 
 
+@media screen and (max-width: 500px) {
+    .hero-text{
+      padding-right: 10px;
+      h1 {
+        font-size: 2rem;
+      }
+    }
+    
+    }
+
+    @media screen and (max-width: 430px) {
+      .hero-text{
+        padding-right: 10px;
+        h1 {
+          font-size: 1.5rem;
+        }
+      }
+      
+      }
+
+
+
+// hamburger  https://javascript.plainenglish.io/animated-hamburger-menu-in-vanilla-javascript-79bd97da00b9
+#hamburger-wrapper {
+  position: absolute;
+  right:50px;
+  top:35px;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.burger {
+  width: 25px;
+  position: relative;
+}
+
+.burger,
+.burger:before,
+.burger:after {
+  padding: 0;
+  background-color: black;
+  width: 100%;
+  height: 8px;
+  transition: margin .1s .2s, transform .2s;
+}
+
+.burger:before,
+.burger:after {
+  margin: 0;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.burger:before {
+  margin-top: -12px;
+}
+
+.burger:after {
+  margin-top: 12px;
+}
+
+/* STYLES FOR OUR BURGER WHEN THE MENU OPENS */
+.open .burger {
+  transform: rotate(45deg);
+}
+
+.open .burger,
+.open .burger:before,
+.open .burger:after {
+  transition: margin .2s, transform .1s .2s;
+}
+
+.open .burger:before,
+.open .burger:after {
+  margin-top: 0;
+}
+
+.open .burger:after {
+  transform: rotate(-90deg)
+}
+
+
+
+
+  

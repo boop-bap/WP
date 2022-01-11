@@ -5,18 +5,25 @@
     <main>
         <section class="hero">
             <div class="hero-image">
-                <img src=<?php echo get_theme_file_uri('./images/burger.png') ?> alt="burger">
+                <img class="hide-on-mobile" src=<?php echo get_theme_file_uri('./images/burger.png') ?> alt="burger">
+                <img class="hide-on-desktop" src=<?php echo get_theme_file_uri('./images/mobile-burger.png') ?>
+                    alt="burger">
+
             </div>
             <div class="hero-text">
                 <h1>Delicious</br> burgers to <span>GO</span> </h1>
                 <h3>Pick up your take-away, dine in at <span>Ved Stranden 11B</span> or get it delivered with our
                     affiliates.</h3>
-                <div class="menu-btn">
+                <div class="menu-btn hide-on-mobile ">
                     <a href="<?php echo site_url('/menu')?>">SEE THE MENU</a>
                 </div>
             </div>
+
         </section>
 
+        <div class="menu-btn menu-btn-mobile hide-on-desktop ">
+            <a href="<?php echo site_url('/menu')?>">SEE THE MENU</a>
+        </div>
 
         <section class="special-offers">
             <h2>SPECIAL DEALS</h2>
@@ -65,7 +72,7 @@
 
 
         <section class="opening-hours">
-            <h2>EVERYTIME OPEN</h2>
+            <h2>OPENING HOURS</h2>
             <div class="hours-container">
                 <div class="hours">
                     <p>12 - 21</p>
