@@ -5,10 +5,20 @@
 
 <body>
     <main>
+    <div class="secondary-nav">
 
+<i class="fas fa-hamburger">Burgers</i>
+
+<span class="iconify" data-icon="ep:fries">Fries</span>
+
+<span class="iconify" data-icon="ep:fries">Dips</span>
+
+<span class="iconify" data-icon="icon-park-outline:drink">Drinks</span>
+
+</div>
     <section class="burger-menu">
             <h1>THE BURGER MENU</h1>
-            <div class="burger-menu-container">
+            <div class="burger-container">
                 <?php $menuPosts = new WP_Query (array(
             "category_name" => "burgers"
         ));

@@ -637,6 +637,15 @@ width: 100%;
   row-gap: 5rem;
   align-content: center;
 }
+.burger-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: space-around;
+  gap: 2rem;
+  row-gap: 5rem;
+  align-content: center;
+}
 
 .burger-menu_item {
   max-width: 365px;
@@ -1092,6 +1101,12 @@ video {
     font-size: 2.5rem;
   }
 }
+.burger-menu-container {
+  grid-template-columns: 1fr 1fr;
+}
+.burger-container {
+  grid-template-columns: 1fr 1fr;
+}
 }
 
 
@@ -1144,6 +1159,11 @@ header {
   h1{
     font-size: 2.5rem;
   }
+}
+.burger-container {
+  grid-template-columns: 1fr;
+  justify-items: center;
+  row-gap: 3rem;
 }
 }
 
