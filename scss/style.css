@@ -1730,7 +1730,12 @@ video {
 }
 
 .adress-map_right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 100%;
+  max-width: unset;
+  margin: 0 auto;
 }
 
 .adress-map_right a {
@@ -1738,7 +1743,8 @@ video {
 }
 
 .adress-map_right iframe {
-  width: 100vw;
+  width: 100%;
+  max-width: unset;
 }
 
 @media screen and (min-width: 780px) {

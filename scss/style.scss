@@ -1457,12 +1457,18 @@ row-gap: 20px;
 }
 
 .adress-map_right{
+  display: flex;
   width: 100%;
-  a {
+  max-width: unset;
+  margin: 0 auto;
+
+    a {
     text-align: center;
   }
   iframe {
-    width: 100vw;
+    width: 100%;
+    max-width: unset;
+
   }
 }
 
