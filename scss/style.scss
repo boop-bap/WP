@@ -1545,7 +1545,8 @@ img {
       grid-row-end: 3;
       margin-left: -150px;
       height: auto;
-      width: 200%;
+      width: 230%;
+      max-width: 400px;
     }
     h4 {
       grid-column: 2;
@@ -1558,9 +1559,10 @@ img {
       grid-row: 2;
       width: 100%;
       p {
-        width: 70%;
+        width: 90%;
         justify-self: center;
         text-align: left;
+        margin-left:40px;
       }
     }
     .price-container {

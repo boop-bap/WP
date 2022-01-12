@@ -1833,7 +1833,8 @@ footer p {
     grid-row-end: 3;
     margin-left: -150px;
     height: auto;
-    width: 200%;
+    width: 230%;
+    max-width: 400px;
   }
   .product-item a h4 {
     -ms-grid-column: 2;
@@ -1851,10 +1852,11 @@ footer p {
     width: 100%;
   }
   .product-item a .description p {
-    width: 70%;
+    width: 90%;
     -ms-grid-column-align: center;
         justify-self: center;
     text-align: left;
+    margin-left: 40px;
   }
   .product-item a .price-container {
     -ms-grid-column: 1;
