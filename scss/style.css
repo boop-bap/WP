@@ -1378,6 +1378,7 @@ video {
   -ms-grid-columns: (1fr)[10];
       grid-template-columns: repeat(10, 1fr);
   height: 300px;
+  padding-bottom: 20px;
 }
 
 .dropdown-container_details {
@@ -1463,9 +1464,17 @@ video {
           justify-content: space-evenly;
 }
 
-.dropdown-container_services img {
+.dropdown-container_services a {
   max-width: 140px;
   max-height: 40px;
+}
+
+.dropdown-container_services img {
+  width: 100%;
+}
+
+.dropdown-container_services :nth-child(1) {
+  margin-bottom: 30px;
 }
 
 @media screen and (max-width: 1300px) {

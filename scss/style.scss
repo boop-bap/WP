@@ -1102,6 +1102,7 @@ video {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
   height: 300px;
+  padding-bottom: 20px;
 }
 
 .dropdown-container_details {
@@ -1162,13 +1163,18 @@ video {
 
 .dropdown-container_services {
   grid-column: span 3;
-
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  img {
+  a {
     max-width: 140px;
     max-height: 40px;
+  }
+  img{
+    width: 100%;
+  }
+  :nth-child(1){
+    margin-bottom: 30px;
   }
 }
 
