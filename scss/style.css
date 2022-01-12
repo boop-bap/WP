@@ -726,7 +726,6 @@ footer p {
   position: absolute;
   top: 0;
   width: 100%;
-  margin: auto;
   padding: 1rem 4rem;
   z-index: 100;
   -webkit-transition: opacity .5s, z-index .5s, -webkit-transform .5s;
@@ -738,6 +737,10 @@ footer p {
 .carousel__photo :nth-child(2) {
   margin-top: 10px;
   font-size: 1.2rem;
+}
+
+.carousel__photo p {
+  margin: 0 auto;
 }
 
 /* Display the initial item and bring it to the front using 'z-index'. These styles also apply to the 'active' item. */
@@ -1364,17 +1367,13 @@ video {
   color: #fff6f6;
 }
 
-/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-.show {
-  display: block;
-}
-
 .dropdown-container {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[10];
       grid-template-columns: repeat(10, 1fr);
   height: 300px;
+  padding-bottom: 20px;
 }
 
 .dropdown-container_details {
@@ -1460,9 +1459,102 @@ video {
           justify-content: space-evenly;
 }
 
-.dropdown-container_services img {
+.dropdown-container_services a {
   max-width: 140px;
   max-height: 40px;
+}
+
+.dropdown-container_services img {
+  width: 100%;
+}
+
+.dropdown-container_services :nth-child(1) {
+  margin-bottom: 30px;
+}
+
+.dropdown-mobile {
+  display: unset !important;
+  position: relative;
+}
+
+.dropbtn-mobile {
+  position: fixed;
+  bottom: 50px;
+  background: #484848;
+  width: 300px;
+  height: 60px;
+  left: 50%;
+  margin-left: -150px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  z-index: 9999;
+}
+
+.dropdown-content-mobile {
+  position: fixed;
+  width: 90vw;
+  display: none;
+  top: unset;
+  bottom: 120px;
+  background-color: #333333;
+  -webkit-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.541);
+          box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.541);
+  border-radius: 5px;
+  border: 2px solid #f7d332;
+  z-index: 99;
+  left: 50%;
+  margin-left: -45vw;
+  height: 500px;
+}
+
+.dropdown-container-mobile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.dropdown-container_mobile_services {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+  margin: 0 auto;
+  gap: 30px;
+}
+
+.dropdown-container_mobile_services a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.dropdown-container_mobile_services a img {
+  width: 100%;
+  margin: auto 0;
+}
+
+.dropdown-container_details_mobile {
+  margin: 0 auto;
+}
+
+.dropdown-container_details_mobile p {
+  font-size: 2rem !important;
+  border: none;
+}
+
+.dropdown-container_details_mobile a {
+  border: 1px solid white;
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {
+  display: unset !important;
 }
 
 @media screen and (max-width: 1300px) {
@@ -1947,9 +2039,8 @@ video {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
+  width: 100vw;
   max-width: unset;
-  margin: 0 auto;
 }
 
 .adress-map_right a {
@@ -1959,6 +2050,59 @@ video {
 .adress-map_right iframe {
   width: 100%;
   max-width: unset;
+  margin: 0 5%;
+}
+
+@media screen and (min-width: 780px) {
+  .aboutus_section {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: (auto)[4];
+        grid-template-rows: repeat(4, auto);
+    grid-gap: 2rem;
+  }
+  .text_area {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+  }
+  .img_area {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
+  }
+  .img_area img {
+    width: 40vw;
+    height: 40vh;
+  }
+  .text_area2 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3/4;
+  }
+  .img_area2 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 1;
+    grid-row: 4/5;
+  }
+  .img_area2 img {
+    width: 40vw;
+    height: 40vh;
+  }
 }
 
 @media screen and (min-width: 780px) {

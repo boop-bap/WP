@@ -586,13 +586,15 @@ footer {
   position: absolute;
   top:0;
   width: 100%;
-  margin: auto;
   padding: 1rem 4rem;
   z-index: 100;
   transition: transform .5s, opacity .5s, z-index .5s;
   :nth-child(2){
     margin-top: 10px;
     font-size: 1.2rem;
+  }
+  p {
+    margin: 0 auto;
   }
 }
 
@@ -1091,15 +1093,13 @@ video {
 
 
 
-/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-.show {
-  display: block;
-}
+
 
 .dropdown-container {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
   height: 300px;
+  padding-bottom: 20px;
 }
 
 .dropdown-container_details {
@@ -1160,15 +1160,98 @@ video {
 
 .dropdown-container_services {
   grid-column: span 3;
-
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  img {
+  a {
     max-width: 140px;
     max-height: 40px;
   }
+  img{
+    width: 100%;
+  }
+  :nth-child(1){
+    margin-bottom: 30px;
+  }
 }
+
+
+// mobile dropdown
+
+
+.dropdown-mobile {
+  display: unset !important;
+  position: relative;
+}
+
+.dropbtn-mobile {
+  position: fixed;
+  bottom: 50px;
+  background: #484848;
+  width: 300px;
+  height: 60px;
+  left: 50%;
+  margin-left: -150px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  z-index: 9999;
+}
+
+.dropdown-content-mobile {
+  position: fixed;
+  width: 90vw;
+  display: none;
+  top: unset;
+  bottom: 120px;  background-color: #333333;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.541);
+  border-radius: 5px;
+  border: 2px solid $yellow;
+  z-index: 99;
+  left: 50%;
+  margin-left: -45vw;
+  height: 500px;
+
+}
+
+.dropdown-container-mobile {
+display: flex;
+flex-direction: column;
+}
+
+.dropdown-container_mobile_services{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  margin:0 auto;
+  gap: 30px;
+  a {
+    display: flex;
+    img {
+      width: 100%;
+      margin: auto 0;
+    }
+  }
+}
+
+.dropdown-container_details_mobile {
+  margin: 0 auto;
+  p{
+    font-size: 2rem !important;
+    border:none;
+  };
+  a {
+    border: 1px solid white;
+  }
+ 
+  
+
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {
+  display: unset !important;
+}
+
 
 @media screen and (max-width: 1300px) {
  
@@ -1627,9 +1710,8 @@ row-gap: 20px;
 
 .adress-map_right{
   display: flex;
-  width: 100%;
+  width: 100vw;
   max-width: unset;
-  margin: 0 auto;
 
     a {
     text-align: center;
@@ -1637,6 +1719,7 @@ row-gap: 20px;
   iframe {
     width: 100%;
     max-width: unset;
+    margin: 0 5%
 
   }
 }
