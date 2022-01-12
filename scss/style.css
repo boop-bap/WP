@@ -1816,7 +1816,7 @@ footer p {
   .burger-menu_item {
     max-width: 100%;
   }
-  .product-item a {
+  .special-offer a {
     display: -ms-grid;
     display: grid;
     -ms-grid-rows: 3;
@@ -1828,7 +1828,7 @@ footer p {
             align-items: center;
     width: 100%;
   }
-  .product-item a img {
+  .special-offer a img {
     -ms-grid-column: 1;
     grid-column: 1;
     -ms-grid-row: 2;
@@ -1839,7 +1839,7 @@ footer p {
     width: 230%;
     max-width: 400px;
   }
-  .product-item a h4 {
+  .special-offer a h4 {
     -ms-grid-column: 2;
     grid-column: 2;
     width: 100%;
@@ -1847,21 +1847,21 @@ footer p {
         grid-column-start: 1;
     grid-column-end: 3;
   }
-  .product-item a .description {
+  .special-offer a .description {
     -ms-grid-column: 2;
     grid-column: 2;
     -ms-grid-row: 2;
     grid-row: 2;
     width: 100%;
   }
-  .product-item a .description p {
+  .special-offer a .description p {
     width: 90%;
     -ms-grid-column-align: center;
         justify-self: center;
     text-align: left;
     margin-left: 40px;
   }
-  .product-item a .price-container {
+  .special-offer a .price-container {
     -ms-grid-column: 1;
         grid-column-start: 1;
     grid-column-end: 3;

@@ -11,7 +11,7 @@
 
             </div>
             <div class="hero-text">
-                <h1>Delicious</br> burgers to <span>GO</span> </h1>
+                <h1>Delicious<br> burgers to <span>GO</span> </h1>
                 <h3>Pick up your take-away, dine in at <span>Ved Stranden 11B</span> or get it delivered with our
                     affiliates.</h3>
                 <div class="menu-btn hide-on-mobile ">
