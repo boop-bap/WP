@@ -37,16 +37,16 @@
                     </ul>
                     <div class="dropdown">
                         <button class="dropbtn">ORDERING OPTIONS</button>
-                        <div id="myDropdown" class="dropdown-content">
+                        <div class="dropdown-content">
                             <div class="dropdown-container">
                                 <div class="dropdown-container_details">
-                                    <a href="tel:+45 60141520">
-                                        <p id="copynumber" value="+45 52 62 58 89">+45 52 62 58 89</p>
+                                    <a href="tel:+4552625889">
+                                        <p>+4552625889</p>
                                     </a>
-                                    <a href="tel:+45 60141520">
+                                    <a href="tel:+4560141520">
                                         <p>Call now</p>
                                     </a>
-                                    <i onclick="copy()"><i class="far fa-copy"></i></i>
+                                    <i><i class="far fa-copy"></i></i>
                                 </div>
                                 <div class="dropdown-container_divider">
                                     <div class="dropdown-line"></div>
@@ -91,16 +91,15 @@
                         <p class="burger"></p>
                     </div>
 
-
                     <div class="dropdown dropdown-mobile">
                         <button class="dropbtn dropbtn-mobile">ORDERING OPTIONS</button>
-                        <div id="myDropdown" class=" dropdown-content-mobile">
+                        <div class=" dropdown-content-mobile">
                             <div class="dropdown-container dropdown-container-mobile">
                                 <div class="dropdown-container_details dropdown-container_details_mobile">
-                                    <a href="tel:+45 60141520">
-                                        <p id="copynumber" value="+45 52 62 58 89">+45 52 62 58 89</p>
+                                    <a href="tel:+4552625889">
+                                        <p>+45 52 62 58 89</p>
                                     </a>
-                                    <a href="tel:+45 60141520">
+                                    <a href="tel:+4552625889">
                                         <p>Call now</p>
                                     </a>
                                     <i onclick="copy()"><i class="far fa-copy"></i></i>
