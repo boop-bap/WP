@@ -178,7 +178,6 @@ nav ul a {
 
 footer {
   width: 100%;
-  height: 240px;
   background: #f7d332;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
@@ -218,7 +217,7 @@ footer p {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  max-height: 200px;
+  min-height: 200px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -1670,6 +1669,12 @@ video {
   header .desktop-nav {
     display: none;
   }
+  .footer {
+    height: 500px !important;
+  }
+  .footer-container_box {
+    margin-bottom: 30px;
+  }
   .product-card {
     -ms-grid-columns: 100%;
         grid-template-columns: 100%;
@@ -1842,7 +1847,12 @@ video {
 }
 
 .adress-map_right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 100%;
+  max-width: unset;
+  margin: 0 auto;
 }
 
 .adress-map_right a {
@@ -1850,7 +1860,8 @@ video {
 }
 
 .adress-map_right iframe {
-  width: 100vw;
+  width: 100%;
+  max-width: unset;
 }
 
 @media screen and (min-width: 780px) {
