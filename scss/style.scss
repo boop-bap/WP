@@ -318,29 +318,33 @@ footer {
 /* Special offers */
 .special-offers {
   margin-top: 100px;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 80px 1fr 1fr;
   color: $white-text;
   text-align: center;
-
-  .special-offers_burger_img{
-    max-width: 330px;
-
+  justify-items: center;
+  h2 {
+    grid-row: 1;
+    grid-column: 2;
   }
-  img {
-    width: 100%;
-    padding-right: 30px;
+  .product-item {
+    grid-row: 2;
   }
-  .menu-btn_special {
-    margin: 65px auto 0 auto;
-    a {
-      width: 100%;
-      height: 20px;
-      margin: auto 0;
-      text-align: center;
-    }
+  h4 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin: 0 20px;
+  }
+  .description {
+    margin-bottom: 20px;
+  }
+  .menu-btn {
+    grid-row: 3;
+    grid-column: 2;
   }
 }
+
 
 .special-offers-container {
   width: 100%;
