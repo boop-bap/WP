@@ -1471,9 +1471,12 @@ footer p {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  gap: 10px;
+  padding-bottom: 10px;
 }
 
 .dropdown-container_services a {
+  margin: auto 0;
   max-width: 140px;
   max-height: 40px;
 }
@@ -1509,7 +1512,7 @@ footer p {
   width: 90vw;
   display: none;
   top: unset;
-  bottom: 120px;
+  bottom: 320px;
   background-color: #333333;
   -webkit-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.541);
           box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.541);
@@ -2232,6 +2235,12 @@ footer p {
   }
   .hero-text h1 {
     font-size: 1.5rem;
+  }
+  .dropdown-container_details {
+    width: unset;
+  }
+  .carousel-wrapper P {
+    width: 100%;
   }
 }
 
