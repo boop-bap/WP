@@ -4,6 +4,7 @@
 <?php get_header(); ?>
 
 <body>
+
     <section class="about-introduction">
 
         <h1>ABOUT US</h1>
