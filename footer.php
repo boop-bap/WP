@@ -29,9 +29,14 @@
             <a href="">About us</a>
             <a href="">Contact</a>
             <div class="footer-container_box__icons">
-                <i class="fab fa-facebook-square fa-2x "></i>
-                <i class="fab fa-instagram-square fa-2x"></i>
-                <i class="far fa-smile fa-2x"></i>
+                <a href="https://www.facebook.com/BurgerGO9000/">
+                    <i class="fab fa-facebook-square fa-2x "></i></a>
+                <a href="https://www.findsmiley.dk/Sider/Search.aspx?k=burger%20go%20aalborg"> <i
+                        class="far fa-smile fa-2x"></i>
+                </a>
+                <a href="https://www.instagram.com/">
+                    <i class="fab fa-instagram-square fa-2x"></i>
+                </a>
             </div>
         </div>
 
