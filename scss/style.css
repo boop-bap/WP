@@ -410,8 +410,8 @@ footer p {
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
-  -ms-grid-rows: 80px 1fr 1fr;
-      grid-template-rows: 80px 1fr 1fr;
+  -ms-grid-rows: 80px 1fr 80px;
+      grid-template-rows: 80px 1fr 80px;
   color: #fff;
   text-align: center;
   justify-items: center;

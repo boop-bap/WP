@@ -319,7 +319,7 @@ footer {
   margin-top: 100px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 80px 1fr 1fr;
+  grid-template-rows: 80px 1fr 80px;
 
   color: $white-text;
   text-align: center;
