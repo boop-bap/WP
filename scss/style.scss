@@ -586,13 +586,15 @@ footer {
   position: absolute;
   top:0;
   width: 100%;
-  margin: auto;
   padding: 1rem 4rem;
   z-index: 100;
   transition: transform .5s, opacity .5s, z-index .5s;
   :nth-child(2){
     margin-top: 10px;
     font-size: 1.2rem;
+  }
+  p {
+    margin: 0 auto;
   }
 }
 
@@ -1548,9 +1550,8 @@ row-gap: 20px;
 
 .adress-map_right{
   display: flex;
-  width: 100%;
+  width: 100vw;
   max-width: unset;
-  margin: 0 auto;
 
     a {
     text-align: center;
@@ -1558,6 +1559,7 @@ row-gap: 20px;
   iframe {
     width: 100%;
     max-width: unset;
+    margin: 0 5%
 
   }
 }
