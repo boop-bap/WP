@@ -596,6 +596,7 @@ footer {
   }
   p {
     margin: 0 auto;
+
   }
 }
 
@@ -1178,7 +1179,10 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  gap: 10px;
+  padding-bottom: 10px;
   a {
+    margin: auto 0;
     max-width: 140px;
     max-height: 40px;
   }
@@ -1217,7 +1221,7 @@ img {
   width: 90vw;
   display: none;
   top: unset;
-  bottom: 120px;  background-color: #333333;
+  bottom: 320px;  background-color: #333333;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.541);
   border-radius: 5px;
   border: 2px solid $yellow;
@@ -1924,6 +1928,17 @@ min-height:300px
         h1 {
           font-size: 1.5rem;
         }
+      }
+
+.dropdown-container_details {
+width: unset;
+}
+      .carousel-wrapper {
+       
+        P {
+          width: 100%;
+        }
+
       }
     }
 
