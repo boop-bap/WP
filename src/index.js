@@ -205,6 +205,21 @@ wrapper.addEventListener("click", () => {
   wrapper.classList.toggle("open")
 })
 
+//COPY NUMBER INTO CLIPBOARD
 
+function copy() {
+  /* Get the text field */
+  var copyNumber = document.getElementById("copynumber");
+
+  /* Select the text field */
+  copyNumber.select();
+  copyNumber.setSelectionRange(0, 99999); /* For mobile devices */
+
+   /* Copy the text inside the text field */
+  navigator.clipboard.writeText(copyNumber.value);
+
+  /* Alert the copied text */
+  alert("Copied the text: " + copyNumber.value);
+}
 
 

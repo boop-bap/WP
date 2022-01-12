@@ -319,7 +319,7 @@ footer {
   margin-top: 100px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 80px 1fr 1fr;
+  grid-template-rows: 80px 1fr 100px;
   color: $white-text;
   text-align: center;
   justify-items: center;
@@ -421,6 +421,7 @@ footer {
   background: $secondary-background;
   border-radius: 15px;
   color: $white-text;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.678);
 
   h2 {
     font-size: 2.25rem;
@@ -498,6 +499,8 @@ footer {
   flex-direction: column;
   flex-wrap: wrap;
   position: relative;
+  border-radius: 15px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.678);
   h2 {
     margin-top: 55px;
     margin-bottom: 0;
@@ -559,6 +562,10 @@ footer {
   overflow: hidden;
   width: 90%;
   margin: auto;
+  P {
+    width: 70%;
+    text-align: center;
+  }
 }
 
 /* Apply 'border-box' to 'box-sizing' so border and padding is included in the width and height. */
@@ -1072,7 +1079,9 @@ video {
   display: none;
   position: absolute; 
   background-color: #333333;
-  box-shadow: 0px 8px 16px 0px rgba(151, 151, 151, 0.2);
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.541);
+  border-radius: 5px;
+  border: 2px solid $yellow;
   z-index: 1;
   left: -435px;
   top: 100px;
@@ -1112,7 +1121,11 @@ video {
   }
   i {
     border: rgb(255, 255, 255) 1px solid;
-
+    font-size: 3rem;
+    i {
+      border: none;
+      justify-self: center;
+    }
   }
   :nth-child(1){
     font-size: 2.25rem;

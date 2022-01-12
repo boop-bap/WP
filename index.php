@@ -108,7 +108,7 @@
 
 
         <section class="reviews">
-
+            <h2>A WORD FROM OUR CUSTOMERS</h2>
             <div class="carousel-wrapper">
                 <div class="carousel">
 
