@@ -35,7 +35,7 @@
             $menuPosts -> the_post(); 
         
          ?>
-            <div class="product-item burger-menu_item">
+            <div class="product-item burger-menu_item special-offer">
                 <a href="<?php the_permalink(); ?>">
                     <img src="<?php the_field("product_photo")?>">
                     <h4><?php the_field("product_name"); ?></h4>
