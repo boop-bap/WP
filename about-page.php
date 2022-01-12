@@ -4,7 +4,7 @@
 <?php get_header(); ?>
 
 <body>
-    <h1>About us</h1>
+    <h1 class="about-us">ABOUT US</h1>
     <h2>Get a look inside Burger GO</h2>
     <video width="1000" height="500" controls src=<?php echo get_theme_file_uri('./video/video.webm')?> type="video/webm" alt="special offer burger">
     </video>
