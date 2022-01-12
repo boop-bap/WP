@@ -4,7 +4,7 @@
 <head>
     <?php wp_head(); ?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Hotjar Tracking Code for https://justaskav.com/ -->
+    <!-- Hotjar Tracking Code for https://justaskav.com/ yooo-->
     <script>
         (function(h,o,t,j,a,r){
             h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
