@@ -726,6 +726,11 @@ footer p {
   transition: transform .5s, opacity .5s, z-index .5s, -webkit-transform .5s;
 }
 
+.carousel__photo :nth-child(2) {
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
+
 /* Display the initial item and bring it to the front using 'z-index'. These styles also apply to the 'active' item. */
 .carousel__photo.initial,
 .carousel__photo.active {
@@ -759,14 +764,12 @@ footer p {
   top: 50%;
   width: 3rem;
   height: 3rem;
-  background-color: #FFF;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   border-radius: 50%;
   cursor: pointer;
   z-index: 1001;
   /* Sit on top of everything */
-  border: 1px solid black;
   /*  opacity: 0;  Hide buttons until carousel is initialised 
   transition:opacity 1s;*/
 }
