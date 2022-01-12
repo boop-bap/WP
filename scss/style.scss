@@ -958,12 +958,18 @@ flex-wrap: wrap;
 }
 
 .aboutus-text{
+  p {
+    font-size: 1.125rem;
+  }
   h2 {
     font-size: 2.25rem;
   }
     margin: 0 20px;
     max-width: 550px;
   a {
+    display: flex;
+    justify-content: space-around;
+    width: 270px;
     text-align: center;
     max-width:280px ;
     margin-top: 30px;
@@ -971,7 +977,16 @@ flex-wrap: wrap;
     padding: 10px;
     border-radius: 5px;
   }
+
+  p {
+    margin: auto 0;
+  }
  
+}
+
+.aboutus-icon{
+  width: 40px;
+  height: 40px;
 }
 
 .aboutus-img {
@@ -1302,6 +1317,80 @@ flex-direction: column;
   height: 280px ;
 }
 
+
+
+
+//About us page
+
+
+
+
+.aboutus-section {
+  margin-top: 100px;
+display: flex;
+flex-direction: column;
+row-gap: 50px;
+:nth-child(2){
+  display: flex;
+  flex-direction: column;
+}
+}
+
+.aboutus-container{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  max-width:550px ;
+  margin: 0 auto;
+  
+}
+
+.aboutus-text{
+  p {
+    font-size: 1.125rem;
+    margin-bottom: 30px;
+  }
+  h2 {
+    font-size: 2.25rem;
+  }
+    margin: 0 20px;
+    max-width: 550px;
+  a {
+    display: flex;
+    justify-content: space-around;
+    width: 270px;
+    text-align: center;
+    max-width:280px ;
+    margin-top: 30px;
+    background: green;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  p {
+    margin: auto 0;
+  }
+ 
+}
+
+.aboutus-icon{
+  width: 40px;
+  height: 40px;
+}
+
+.aboutus-img {
+  margin: 50px 0;
+max-width: 550px;
+img {
+  width: 100%;
+  border-radius: 15px;
+}
+}
+
+
+
+
+
 }
 
 @media screen and (max-width: 900px) {
@@ -1404,6 +1493,10 @@ flex-direction: column;
 
   }
 }
+
+
+
+
 }
 
 

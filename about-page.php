@@ -39,8 +39,12 @@
                     We take food-safety and hygiene seriously when we cook for our customers.
                     Follow the link below to see our control report from the Danish Veterinary and Food Administration.
                 </p>
-                <a href="https://www.findsmiley.dk/Sider/Search.aspx?k=burger%20go%20aalborg">View control report <i
-                        class="far fa-smile fa-2x"></i></a>
+                <a href="https://www.findsmiley.dk/Sider/Search.aspx?k=burger%20go%20aalborg">
+                    <p>View control report </p>
+                    <img src=<?php echo get_theme_file_uri('./images/smiley-white.svg') ?> alt="smiley"
+                        class="aboutus-icon">
+
+                </a>
             </div>
             <div class="aboutus-img lala">
                 <img src=<?php echo get_theme_file_uri('./images/About_us-img2-min.jpeg') ?> alt="burger">
