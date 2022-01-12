@@ -41,7 +41,7 @@
                 <a href="https://www.findsmiley.dk/Sider/Search.aspx?k=burger%20go%20aalborg">View control report <i
                         class="far fa-smile fa-2x"></i></a>
             </div>
-            <div class="aboutus-img">
+            <div class="aboutus-img lala">
                 <img src=<?php echo get_theme_file_uri('./images/About_us-img2-min.jpeg') ?> alt="burger">
             </div>
         </div>
