@@ -20,7 +20,7 @@
         <p>Tel: +45 52 95 65 78<br>
         </p>
         <br>
-        <a class="directions" href="https://www.google.com/maps/dir//Burger+GO+Ved+Stranden+11B+9000+Aalborg/@57.050467,9.920234,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x4649328c63bf7415:0x7c6478aac36f1a84!2m2!1d9.920234!2d57.050467">GET DIRECTIONS</a>
+        <a class="directions" target="_blank" href="https://www.google.com/maps/dir//Burger+GO+Ved+Stranden+11B+9000+Aalborg/@57.050467,9.920234,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x4649328c63bf7415:0x7c6478aac36f1a84!2m2!1d9.920234!2d57.050467">GET DIRECTIONS</a>
     </div>
     <div class="vertical">
     </div>
