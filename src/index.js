@@ -164,8 +164,13 @@ rollSlides()
 // Drop down
 
 const dropBtn =document.querySelector(".dropbtn")
+const dropBtnMobile =document.querySelector(".dropbtn-mobile")
+
 
 const box = document.querySelector(".dropdown-content")
+const boxMobile = document.querySelector(".dropdown-content-mobile")
+
+
 
 const dropDown=()=>{
  if (box.classList.contains("show")){
@@ -176,7 +181,20 @@ const dropDown=()=>{
 }
 
 
+//mobile drop down
+const dropDownMobile=()=>{
+  console.log(123)
+ if (boxMobile.classList.contains("show")){
+  boxMobile.classList.remove("show")
+ } else {
+  boxMobile.classList.add("show")
+ }
+}
+
+
 dropBtn.addEventListener('click',dropDown)
+dropBtnMobile.addEventListener('click',dropDownMobile)
+
 
 
 

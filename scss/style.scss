@@ -1093,10 +1093,7 @@ video {
 
 
 
-/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-.show {
-  display: block;
-}
+
 
 .dropdown-container {
   display: grid;
@@ -1177,6 +1174,84 @@ video {
     margin-bottom: 30px;
   }
 }
+
+
+// mobile dropdown
+
+
+.dropdown-mobile {
+  display: unset !important;
+  position: relative;
+}
+
+.dropbtn-mobile {
+  position: fixed;
+  bottom: 50px;
+  background: #484848;
+  width: 300px;
+  height: 60px;
+  left: 50%;
+  margin-left: -150px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  z-index: 9999;
+}
+
+.dropdown-content-mobile {
+  position: fixed;
+  width: 90vw;
+  display: none;
+  top: unset;
+  bottom: 120px;  background-color: #333333;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.541);
+  border-radius: 5px;
+  border: 2px solid $yellow;
+  z-index: 99;
+  left: 50%;
+  margin-left: -45vw;
+  height: 500px;
+
+}
+
+.dropdown-container-mobile {
+display: flex;
+flex-direction: column;
+}
+
+.dropdown-container_mobile_services{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  margin:0 auto;
+  gap: 30px;
+  a {
+    display: flex;
+    img {
+      width: 100%;
+      margin: auto 0;
+    }
+  }
+}
+
+.dropdown-container_details_mobile {
+  margin: 0 auto;
+  p{
+    font-size: 2rem !important;
+    border:none;
+  };
+  a {
+    border: 1px solid white;
+  }
+ 
+  
+
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {
+  display: unset !important;
+}
+
 
 @media screen and (max-width: 1300px) {
  
