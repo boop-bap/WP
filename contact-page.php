@@ -5,7 +5,7 @@
 
 <body>
     <section class="contact-page">
-        <h1>CONTACT</h1>
+        <h1 class="contact-us">CONTACT</h1>
     <div class="contact-intro">
         
         <p>Burger Go is located near Jomfru Ane Gade in the centre of Aalborg. If you have any questions or would like
