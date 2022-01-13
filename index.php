@@ -75,15 +75,15 @@ if ($timePosts->have_posts()) :
             <div class="hours-container">
                 <div class="hours">
                     <p><?php the_field("mon-time") ?></p>
-                    <p>MON -THU</p>
+                    <p>MON - WED</p>
                 </div>
                 <div class="hours">
                     <p><?php the_field("fri-time") ?></p>
-                    <p>FRI</p>
+                    <p>THU</p>
                 </div>
                 <div class="hours">
                     <p><?php the_field("sat-time") ?></p>
-                    <p>SAT</p>
+                    <p>FRI - SAT</p>
                 </div>
                 <div class="hours">
                     <p><?php the_field("sun-time") ?></p>
