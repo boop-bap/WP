@@ -1,3 +1,5 @@
+<?php /* Template Name: Main Page */ ?>
+
 <?php get_header(); ?>
 
 <body>
@@ -5,88 +7,96 @@
     <main>
         <section class="hero">
             <div class="hero-image">
-                <img src=<?php echo get_theme_file_uri('./images/burger.png') ?> alt="burger">
+                <img class="hide-on-mobile" src=<?php echo get_theme_file_uri('./images/burger.png') ?> alt="burger">
+                <img class="hide-on-desktop" src=<?php echo get_theme_file_uri('./images/mobile-burger.png') ?>
+                    alt="burger">
+
             </div>
             <div class="hero-text">
-                <h1>Delicious</br> burgers to <span>GO</span> </h1>
-                <h3>Pick up your take-away, dine in at <span>Ved Stranden 11B</span> or get it delivered with our
+                <h1>Delicious<br> burgers to <span style="font-style:italic;">GO</span> </h1>
+                <h3>Come and taste our burgers at <span style="text-decoration: underline;">Ved Stranden 11B</span> or get it delivered with our
                     affiliates.</h3>
-                <div class="menu-btn">
+                <div class="menu-btn hide-on-mobile ">
                     <a href="<?php echo site_url('/menu')?>">SEE THE MENU</a>
                 </div>
             </div>
+
         </section>
 
+        <div class="menu-btn menu-btn-mobile hide-on-desktop ">
+            <a href="<?php echo site_url('/menu')?>">SEE THE MENU</a>
+        </div>
 
         <section class="special-offers">
             <h2>SPECIAL DEALS</h2>
-            <div class="special-offers-container">
-                <a href='' class="special-offers_burger">
-                    <div class="special-offers_burger_img"> <img
-                            src=<?php echo get_theme_file_uri('./images/burger.png') ?> alt="special offer burger">
+            <?php $menuPosts = new WP_Query (array(
+            "post_per_page" => 2,
+            "category_name" => "offers"
+        ));
+        while ($menuPosts -> have_posts()) {
+            $menuPosts -> the_post(); 
+        
+         ?>
+
+            <div class="product-item burger-menu_item special-offer">
+
+                <a href="<?php the_permalink(); ?>">
+                    <img src="<?php the_field("product_photo")?>">
+                    <h4><?php the_field("product_name"); ?></h4>
+                    <div class="description">
+                        <p><?php the_field("description"); ?></p>
                     </div>
-                    <h4>2x the special</h4>
-                    <p>Cheese, bacon, 100% beef
-                        tomato, cheese, chili mayo, lettuce, onion, red onion, jalapeño, gravy, red peppers</p>
                     <div class="price-container">
-                        <i class="price-icon">99kr.-</i>
-                        <p>save 9kr.</p>
-                    </div>
-                </a>
-                <a href='' class="special-offers_burger">
-                    <div class="special-offers_burger_img"> <img
-                            src=<?php echo get_theme_file_uri('./images/burger.png') ?> alt="special offer burger">
-                    </div>
-                    <h4>2x the special</h4>
-                    <p>Cheese, bacon, 100% beef
-                        tomato, cheese, chili mayo, lettuce, onion, red onion, jalapeño, gravy, red peppers</p>
-                    <div class="price-container">
-                        <i class="price-icon">99kr.-</i>
-                        <p>save 9kr.</p>
-                    </div>
-                </a>
-                <a href='' class="special-offers_burger">
-                    <div class="special-offers_burger_img"> <img
-                            src=<?php echo get_theme_file_uri('./images/burger.png') ?> alt="special offer burger">
-                    </div>
-                    <h4>2x the special</h4>
-                    <p>Cheese, bacon, 100% beef
-                        tomato, cheese, chili mayo, lettuce, onion, red onion, jalapeño, gravy, red peppers</p>
-                    <div class="price-container">
-                        <i class="price-icon">99kr.-</i>
-                        <p>save 9kr.</p>
+                        <i class="price-icon price-icon_extra "><?php the_field("price"); ?> Kr.</i>
+                        <p>Save 15 Kr.</p>
+
                     </div>
                 </a>
             </div>
+
+
+            <?php } ?>
+
             <div class="menu-btn menu-btn_special">
                 <a href="<?php echo site_url('/menu')?>">SEE THE MENU</a>
             </div>
         </section>
 
-
+        <?php 
+        $timePosts = new WP_Query(array(
+            "post_type" => "time",
+            "posts-per-page" => 1
+        ));
+if ($timePosts->have_posts()) :
+    while ($timePosts->have_posts()) : $timePosts->the_post();
+    ?>
         <section class="opening-hours">
-            <h2>EVERYTIME OPEN</h2>
+            <h2>OPENING HOURS</h2>
             <div class="hours-container">
                 <div class="hours">
-                    <p>12 - 21</p>
-                    <p>MON - THU</p>
+                    <p><?php the_field("mon-time") ?></p>
+                    <p>MON - WED</p>
                 </div>
                 <div class="hours">
-                    <p>12 - 21</p>
-                    <p>MON - THU</p>
+                    <p><?php the_field("fri-time") ?></p>
+                    <p>THU</p>
                 </div>
                 <div class="hours">
-                    <p>12 - 21</p>
-                    <p>MON - THU</p>
+                    <p><?php the_field("sat-time") ?></p>
+                    <p>FRI - SAT</p>
                 </div>
                 <div class="hours">
-                    <p>12 - 21</p>
-                    <p>MON - THU</p>
+                    <p><?php the_field("sun-time") ?></p>
+
+                    <p>SUN</p>
                 </div>
             </div>
         </section>
-
-
+        <?php
+    endwhile;
+endif;
+wp_reset_postdata();
+         ?>
         <section class="selling-points">
             <h2>HIGH-QUALITY BURGERS FOR AN ATTRACTIVE PRICE</h2>
 
@@ -113,37 +123,26 @@
 
 
         <section class="reviews">
-
+            <h2>A WORD FROM OUR CUSTOMERS</h2>
             <div class="carousel-wrapper">
                 <div class="carousel">
 
                     <div class="carousel__photo initial">
-                        <p>"Average choice if you need a simple but tasty burger quickly. Various selection, menu
-                            options,
-                            very
-                            nice and friendly staff, with a quick service."</p>
-                        <p>Dora the explorer</p>
+                        <p>"De bedste brugere/pomfritter jeg længe har smagt! Hold nu fast en omgang lækkerhed. 
+                        Min mund løber helt i vand, blot ved at skrive denne anmeldelse.</p>
+                        <p>Niclas</p>
                     </div>
                     <div class="carousel__photo">
-                        <p>"Average choice if you need a simple but tasty burger quickly. Various selection, menu
-                            options,
-                            very
-                            nice and friendly staff, with a quick service."</p>
-                        <p>Dora he explorer</p>
+                        <p>"Uden tvivl mit favoritsted i Aalborg. Og helt sikkert Danmarks bedste burger. Giv det er forsøg! I vil ikke fortryde det 😍"</p>
+                        <p>Mustafe</p>
                     </div>
                     <div class="carousel__photo">
-                        <p>"Average choice if you need a simple but tasty burger quickly. Various selection, menu
-                            options,
-                            very
-                            nice and friendly staff, with a quick service."</p>
-                        <p>Dora the explorer</p>
+                        <p>"Super dejlig service, og simpel men fantastisk burger!"</p>
+                        <p>Caroline</p>
                     </div>
                     <div class="carousel__photo">
-                        <p>"Average choice if you need a simple but tasty burger quickly. Various selection, menu
-                            options,
-                            very
-                            nice and friendly staff, with a quick service."</p>
-                        <p>Dora the explorer</p>
+                        <p>"Efter at have boet i Aalborg i over 5 år, kan jeg med sikkerhed sige at BurgerGo er der, hvor har har haft de bedste burgeroplevelser. "</p>
+                        <p>Mads</p>
                     </div>
 
 
@@ -162,8 +161,8 @@
         <section class="adress-map">
             <div class="adress-map_left">
                 <h2>FIND US IN THE CENTRE OF AALBORG</h2>
-                <p>Pick up your burgers as take-away or dine-in with us.
-                    Reservations are not neccessary.</p>
+                <p>You can pick up your take-away or dine-in with us. 
+                    We look forward to seeing you!</p>
                 <p>VED STRANDEN 11B
                     9000, AALBORG</p>
                 <p>+45 12 34 56 78</p>

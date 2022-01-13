@@ -6,30 +6,34 @@
 <body>
     <div class="secondary-nav">
         <div class="burgers">
-            <i class="fas fa-hamburger"></i>
-            <h5>BURGERS</h5>
-
+            <a href="#burgers">
+                <i class="fas fa-hamburger"></i>
+                <h5>BURGERS</h5>
+            </a>
         </div>
-        <div class="fires">
-            <i class="iconify" data-icon="ep:fries"></i>
-            <h5>FRIES</h5>
-
+        <div class="fries">
+            <a href="#sides">
+                <i class="iconify" data-icon="ep:fries"></i>
+                <h5>FRIES</h5>
+            </a>
         </div>
         <div class="dips">
-            <i class="iconify" data-icon="ep:fries"></i>
-            <h5>DIPS</h5>
-
+            <a href="#dips">
+                <i class="iconify" data-icon="ep:fries"></i>
+                <h5>DIPS</h5>
+            </a>
         </div>
         <div class="drinks">
-            <i class="iconify" data-icon="icon-park-outline:drink">Drinks</i>
-            <h5>DRINKS</h5>
-
+            <a href="#drinks">
+                <i class="iconify" data-icon="icon-park-outline:drink">Drinks</i>
+                <h5>DRINKS</h5>
+            </a>
         </div>
     </div>
     <main>
+    <h1 class="our-menu">OUR MENU</h1>
 
-
-        <section class="burger-menu">
+        <section id="burgers" class="burger-menu">
             <h1>THE BURGER MENU</h1>
             <div class="burger-container">
                 <?php $menuPosts = new WP_Query (array(
@@ -41,16 +45,15 @@
          ?>
                 <div class="product-item burger-menu_item">
                     <a href="<?php the_permalink(); ?>">
-                        <img src="<?php the_field("product_photo")?>">
+                        <img src="<?php the_field("menu_photo")?>">
                         <h4><?php the_field("product_name"); ?></h4>
                         <div class="price-container">
-                            <i class="price-icon price-icon_extra "><?php the_field("price"); ?> Kr.</i>
-                            <i class="price-icon_secondary"><?php the_field("menu_price"); ?> Kr.<br> SINGLE</i>
+                            <i class="price-icon price-icon_extra "><?php the_field("menu_price"); ?> Kr.</i>
+                            <i class="price-icon_secondary"><?php the_field("price"); ?> Kr.<br> SINGLE</i>
 
                         </div>
                     </a>
                 </div>
-
                 <?php } ?>
 
         </section>
@@ -84,13 +87,15 @@
                         </div>
                     </a>
                 </div>
+
+
                 <?php } ?>
 
         </section>
 
         <hr class="horizonal">
 
-        <section class="burger-menu">
+        <section id="sides" class="burger-menu">
             <h1>SIDE DISHES</h1>
             <div class="burger-menu-container">
 
@@ -117,7 +122,7 @@
 
         <hr class="horizonal">
 
-        <section class="burger-menu">
+        <section id="dips" class="burger-menu">
             <h1>DIPS</h1>
             <div class="burger-menu-container">
                 <?php $menuPosts = new WP_Query (array(
@@ -143,7 +148,7 @@
         </section>
         <hr class="horizonal">
 
-        <section class="burger-menu">
+        <section id="drinks" class="burger-menu">
             <h1>DRINKS</h1>
             <div class="burger-menu-container">
                 <?php $menuPosts = new WP_Query (array(

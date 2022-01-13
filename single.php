@@ -4,6 +4,7 @@
 <?php get_header(); ?>
 
 <body>
+    <section class="content-single">
     <a href="<?php echo site_url('/menu')?>">
         <div class="back-home">
             <i class="fas fa-chevron-left"></i>
@@ -19,8 +20,17 @@
         </div>
         <div class="prices">
             <i class="price-icon price-icon_extra "><?php the_field("price"); ?> Kr.</i>
-            <i class="price-icon_secondary"><?php the_field("menu_price"); ?> Kr.<br> SINGLE</i>
+            <i class="price-icon_secondary"><?php the_field("menu_price"); ?> Kr.<br> MENU</i>
             <p>GET 2 SINGLES ADD 40 Kr.</p>
+        </div>
+    </div>
+
+    <div class="menu-product-card">
+        <h1>GET THE MENU</h1>
+        <img src=<?php the_field("menu_photo"); ?> alt="burger menu item">
+        
+        <div class="prices">
+            <i class="price-icon price-icon_extra "><?php the_field("menu_price"); ?> Kr.</i>
         </div>
     </div>
 
@@ -46,7 +56,7 @@
     <hr class="horizonal">
 
     <div class="add-options">
-        <h2>ADD SIDES AND DRINKS TO YOUR ORDER</h2>
+        <h2>YOU MAY ALSO LIKE</h2>
         <div class="burger-menu-container">
 
 
@@ -65,7 +75,7 @@
                     <h4><?php the_field("product_name"); ?></h4>
                     <div class="price-container">
                         <i class="price-icon price-icon_extra "><?php the_field("price"); ?> Kr.</i>
-                        <i class="price-icon_secondary"><?php the_field("menu_price"); ?> Kr.<br> SINGLE</i>
+                        <i class="price-icon_secondary"><?php the_field("menu_price"); ?> Kr.<br> MENU</i>
 
                     </div>
                 
@@ -75,4 +85,5 @@
         </div>
 
     </div>
+        </section>
     <?php get_footer();?>

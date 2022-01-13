@@ -28,7 +28,9 @@ body {
   color: $white-text;
   display: flex;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 .container {
   margin: 0 auto;
   max-width: 1440px;
@@ -41,7 +43,6 @@ body {
 header {
   margin-bottom: 50px;
   height: 80px;
-
 }
 
 
@@ -146,7 +147,6 @@ nav ul {
 
 footer {
   width: 100%;
-  height: 240px;
   background: $yellow;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
@@ -177,7 +177,7 @@ footer {
   width: 100%;
   display: flex;
   justify-content: space-evenly;
-  max-height: 200px;
+  min-height: 200px;
   flex-wrap: wrap;
   :nth-of-type(2) {
     p {
@@ -218,7 +218,7 @@ footer {
 // SECONDARY NAVIGATION FOR MENU
 .secondary-nav {
   position: fixed;
-  top: 100px;
+  top: 150px;
   right: 0;
   height: 60vh;
   display: grid;
@@ -226,7 +226,8 @@ footer {
   justify-items: center;
   align-items: center;
   background-color: $secondary-background;
-  width: 5%;
+  opacity: 0.9;
+  width: 70px;
   padding: 10px;
   border-radius: 15px 0 0 15px;
   h5 {
@@ -240,6 +241,15 @@ footer {
   }
   .iconify {
     font-size: 2.5rem;
+  }
+  a {
+    cursor: pointer;
+    display: grid;
+    grid-template-rows: 2;
+    justify-content: center;
+  }
+  svg {
+    justify-self: center;
   }
 }
 // Main page --------
@@ -289,6 +299,7 @@ footer {
   font-size: 1.25rem;
   border-radius: 5px;
   margin: 35px 0 15px 0;
+  transition: 0.3s;
   a {
     width: 100%;
     height: 20px;
@@ -296,33 +307,43 @@ footer {
     text-align: center;
   }
 }
+.menu-btn:hover {
+  transition: 0.3s;
+  transform: scale(1.05);
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.651);
+}
 
 /* Special offers */
 .special-offers {
   margin-top: 100px;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 80px 1fr 80px;
+
   color: $white-text;
   text-align: center;
-
-  .special-offers_burger_img{
-    max-width: 330px;
-
+  justify-items: center;
+  h2 {
+    grid-row: 1;
+    grid-column: 2;
   }
-  img {
-    width: 100%;
-    padding-right: 30px;
+  .product-item {
+    grid-row: 2;
   }
-  .menu-btn_special {
-    margin: 65px auto 0 auto;
-    a {
-      width: 100%;
-      height: 20px;
-      margin: auto 0;
-      text-align: center;
-    }
+  h4 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin: 0 20px;
+  }
+  .description {
+    margin-bottom: 20px;
+  }
+  .menu-btn {
+    grid-row: 3;
+    grid-column: 2;
   }
 }
+
 
 .special-offers-container {
   width: 100%;
@@ -347,7 +368,7 @@ footer {
 }
 
 .price-container {
-  margin-top: 35px;
+  margin-top: 20px;
   display: flex;
   justify-content: space-evenly;
   p {
@@ -400,24 +421,29 @@ footer {
   background: $secondary-background;
   border-radius: 15px;
   color: $white-text;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.678);
 
   h2 {
     font-size: 2.25rem;
     margin: 45px auto;
   }
-  .hours-container {
-    display: flex;
-    justify-content: space-around;
-    :nth-child(1) {
-      font-size: 2.25rem;
-    }
-    :nth-child(2) {
-      font-size: 1.5rem;
-    }
+  
+  
+}
+
+.hours-container {
+  display: flex;
+  justify-content: space-around;
+  :nth-child(1) {
+    font-size: 2.25rem;
   }
-  .hours {
-    text-align: center;
+  :nth-child(2) {
+    font-size: 1.5rem;
   }
+}
+
+.hours {
+  text-align: center;
 }
 
 // Selling points
@@ -473,6 +499,8 @@ footer {
   flex-direction: column;
   flex-wrap: wrap;
   position: relative;
+  border-radius: 15px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.678);
   h2 {
     margin-top: 55px;
     margin-bottom: 0;
@@ -534,6 +562,10 @@ footer {
   overflow: hidden;
   width: 90%;
   margin: auto;
+  P {
+    width: 70%;
+    text-align: center;
+  }
 }
 
 /* Apply 'border-box' to 'box-sizing' so border and padding is included in the width and height. */
@@ -554,10 +586,18 @@ footer {
   position: absolute;
   top:0;
   width: 100%;
-  margin: auto;
+  min-height: 150px;
   padding: 1rem 4rem;
   z-index: 100;
   transition: transform .5s, opacity .5s, z-index .5s;
+  :nth-child(2){
+    margin-top: 10px;
+    font-size: 1.2rem;
+  }
+  p {
+    margin: 0 auto;
+
+  }
 }
 
 /* Display the initial item and bring it to the front using 'z-index'. These styles also apply to the 'active' item. */
@@ -588,15 +628,13 @@ footer {
 .carousel__button--prev,
 .carousel__button--next {
   position: absolute;
-  top:50%;
+  top:10%;
   width: 3rem;
   height: 3rem;
-  background-color: #FFF;
   transform: translateY(-50%);
   border-radius: 50%;
   cursor: pointer; 
   z-index: 1001; /* Sit on top of everything */
-  border:1px solid black;
 /*  opacity: 0;  Hide buttons until carousel is initialised 
   transition:opacity 1s;*/
 }
@@ -635,6 +673,7 @@ footer {
   height: 425px;
   display: flex;
   justify-content: space-between;
+  
   iframe {
     height: 100%;
     width: 100%;
@@ -643,8 +682,7 @@ footer {
 }
 
 .adress-map_right {
-  max-width: 600px;
-width: 100%;
+  width: 100%;
 }
 
 .adress-map_left {
@@ -678,6 +716,21 @@ width: 100%;
 
 // Burger menus
 
+.our-menu {
+  font-size: 4rem;
+    line-height: 1.4;
+    font-family: "Titillium Web";
+}
+.about-us {
+  font-size: 4rem;
+    line-height: 1.4;
+    font-family: "Titillium Web";
+}
+.contact-us {
+  font-size: 4rem;
+    line-height: 1.4;
+    font-family: "Titillium Web";
+}
 .burger-menu {
   h1 {
     text-align: center;
@@ -688,7 +741,7 @@ width: 100%;
     font-size: 1.5rem;
     font-weight: 400;
     text-align: center;
-    margin: 20px 0;
+    margin: 0;
   }
 }
 
@@ -728,6 +781,9 @@ width: 100%;
 }
 
 //Single page
+.menu-product-card {
+  display: none;
+}
 .back-home {
   display: grid;
   grid-template-columns: 30px 150px;
@@ -747,19 +803,22 @@ width: 100%;
   width: 55vw;
   height: auto;
   margin-left: 15vw;
+  
   img {
     grid-column: 1;
     border-radius: 15px 0 0 15px;
-    height: 100%;
     width: 100%;
+    height: 100%;
     grid-row-start: 1;
     grid-row-end: 4;
+    max-height: 300px;
   }
   h1,
   .desc,
   .prices {
     grid-column: 2;
     padding: 10px 10px 10px 20px;
+    transition: 0.3s;
   }
   h1 {
     margin-top: 10px;
@@ -791,11 +850,11 @@ width: 100%;
     }
   }
 }
-
 .product-item {
   display: grid;
   grid-template-rows: 3;
   justify-items: center;
+  transition: 0.3s;
   i {
     grid-row: 3;
     display: flex;
@@ -805,7 +864,11 @@ width: 100%;
     margin: 0 0 20px 0;
   }
 }
+.product-item:hover {
+  transition: 0.3s;
+  transform: scale(1.07);
 
+}
 .horizonal {
   margin-top: 10vh;
   border: 2px solid $yellow;
@@ -866,68 +929,82 @@ width: 100%;
 
 
 //About us page
-video {
-  justify-content: center;
-  padding-bottom: 3rem;
+
+
+.about-introduction{ 
+  display: flex;
+  flex-direction: column;
 }
 
-.aboutus_section {
-  display: grid;
-  grid-template-columns: repeat(2, auto);
-  grid-template-rows: repeat(2, auto);
-  grid-gap: 3rem;
+.about-video {
+  margin: 0 auto;
+  max-width: 900px;
+  width:100% ;
 }
 
-.text_area {
-  grid-column: 1/2;
-  grid-row: 1/2;
+.aboutus-section {
+  margin-top: 100px;
+display: flex;
+flex-direction: column;
+flex-wrap: wrap;
+:nth-child(2){
+  flex-direction: row-reverse;
+}
 }
 
-.text_area h2 {
-  text-align: left;
+.aboutus-container{
+  display: flex;
+  justify-content: space-between;
+  margin: 50px 0;
 }
 
-.img_area {
-  grid-column: 2/3;
-  grid-row: 1/2;
+.aboutus-text{
+  p {
+    font-size: 1.125rem;
+  }
+  h2 {
+    font-size: 2.25rem;
+  }
+    margin: 0 20px;
+    max-width: 550px;
+  a {
+    display: flex;
+    justify-content: space-around;
+    width: 270px;
+    text-align: center;
+    max-width:280px ;
+    margin-top: 30px;
+    background: green;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  p {
+    margin: auto 0;
+  }
+ 
 }
 
-.img_area img{
-  width: 40vw;
-  height: 40vh;
+.aboutus-icon{
+  width: 40px;
+  height: 40px;
 }
 
-.text_area2 {
-  grid-column: 2/3;
-  grid-row: 2/3;
+.aboutus-img {
+max-width: 550px;
+img {
+  width: 100%;
+  border-radius: 15px;
+}
 }
 
-.text_area2 h2 {
-  text-align: left;
-}
-
-.img_area2 {
-  grid-column: 1/2;
-  grid-row: 2/3;
-}
-
-.img_area2 img{
-  width: 40vw;
-  height: 40vh;
-}
-
-.text_area2 a {
-  background-color: #009E22;
-  padding: 0.5rem;
-  border-radius: 5px;
-}
 
 // CONTACT PAGE
 
 .contact-page {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 6% 9% 20% 65%;
+  grid-template-rows: 7% 10% 20% 65%;
   height: 100%;
   width: 100%;
   row-gap: 20px;
@@ -941,6 +1018,10 @@ video {
     font-size: 4rem;
     line-height: 1.4;
     font-family: "Titillium Web";
+  }
+  p {
+    top: 150px;
+    text-align: center;
   }
 }
 
@@ -994,8 +1075,13 @@ video {
   border-radius: 5px;
   padding: 0 15px;
   margin: auto 0;
+  transition: 0.5s;
 }
-
+.dropbtn:hover {
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.699);
+  transition: 0.5s;
+  transform: scale(1.05);
+}
 /* Dropdown button on hover & focus */
 
 
@@ -1011,9 +1097,11 @@ video {
   display: none;
   position: absolute; 
   background-color: #333333;
-  box-shadow: 0px 8px 16px 0px rgba(151, 151, 151, 0.2);
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.541);
+  border-radius: 5px;
+  border: 2px solid $yellow;
   z-index: 1;
-  left: -435px;
+  left: -475px;
   top: 100px;
   color: #fff6f6;
 }
@@ -1021,15 +1109,13 @@ video {
 
 
 
-/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-.show {
-  display: block;
-}
+
 
 .dropdown-container {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
   height: 300px;
+  padding-bottom: 20px;
 }
 
 .dropdown-container_details {
@@ -1051,7 +1137,11 @@ video {
   }
   i {
     border: rgb(255, 255, 255) 1px solid;
-
+    font-size: 3rem;
+    i {
+      border: none;
+      justify-self: center;
+    }
   }
   :nth-child(1){
     font-size: 2.25rem;
@@ -1086,20 +1176,104 @@ video {
 
 .dropdown-container_services {
   grid-column: span 3;
-
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  img {
+  gap: 10px;
+  padding-bottom: 10px;
+  a {
+    margin: auto 0;
     max-width: 140px;
     max-height: 40px;
   }
+  img{
+    width: 100%;
+  }
+  :nth-child(1){
+    margin-bottom: 30px;
+  }
 }
 
-@media screen and (max-width: 1300px) {
-  body {
-    background-color: rgb(121, 121, 121);
+
+// mobile dropdown menu
+
+
+.dropdown-mobile {
+  display: unset !important;
+  position: relative;
+}
+
+.dropbtn-mobile {
+  position: fixed;
+  bottom: 250px;
+  background: #484848;
+  width: 300px;
+  height: 60px;
+  left: 50%;
+  margin-left: -150px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  z-index: 9999;
+}
+
+.dropdown-content-mobile {
+  position: fixed;
+  width: 90vw;
+  display: none;
+  top: unset;
+  bottom: 320px;  background-color: #333333;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.541);
+  border-radius: 5px;
+  border: 2px solid $yellow;
+  z-index: 99;
+  left: 50%;
+  margin-left: -45vw;
+  height: 500px;
+
+}
+
+.dropdown-container-mobile {
+display: flex;
+flex-direction: column;
+}
+
+.dropdown-container_mobile_services{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  margin:0 auto;
+  gap: 30px;
+  a {
+    display: flex;
+    img {
+      width: 100%;
+      margin: auto 0;
+    }
   }
+}
+
+.dropdown-container_details_mobile {
+  margin: 0 auto;
+  p{
+    font-size: 2rem !important;
+    border:none;
+  };
+  a {
+    border: 1px solid white;
+  }
+ 
+  
+
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {
+  display: unset !important;
+}
+
+
+@media screen and (max-width: 1300px) {
+ 
 
   // main page
 
@@ -1121,16 +1295,20 @@ video {
     column-gap: 1rem;
     justify-content: space-between;
   }
-
+.product-card {
+  width: 100%;
+  margin: 0;
+}
+.back-home {
+  margin-left: 0;
+  margin-bottom: 20px;
+}
 
   
 }
 
 @media screen and (max-width: 1024px) {
-  body {
-  background: rgb(139, 123, 92);
-  }
-
+ 
 //main page
 
 .hero-text{
@@ -1143,13 +1321,84 @@ video {
   height: 280px ;
 }
 
+
+
+
+//About us page
+
+
+
+
+.aboutus-section {
+  margin-top: 100px;
+display: flex;
+flex-direction: column;
+row-gap: 50px;
+:nth-child(2){
+  display: flex;
+  flex-direction: column;
+}
+}
+
+.aboutus-container{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  max-width:550px ;
+  margin: 0 auto;
+  
+}
+
+.aboutus-text{
+  p {
+    font-size: 1.125rem;
+    margin-bottom: 30px;
+  }
+  h2 {
+    font-size: 2.25rem;
+  }
+    margin: 0 20px;
+    max-width: 550px;
+  a {
+    display: flex;
+    justify-content: space-around;
+    width: 270px;
+    text-align: center;
+    max-width:280px ;
+    margin-top: 30px;
+    background: green;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  p {
+    margin: auto 0;
+  }
+ 
+}
+
+.aboutus-icon{
+  width: 40px;
+  height: 40px;
+}
+
+.aboutus-img {
+  margin: 50px 0;
+max-width: 550px;
+img {
+  width: 100%;
+  border-radius: 15px;
+}
+}
+
+
+
+
+
 }
 
 @media screen and (max-width: 900px) {
-  body {
-  background: rgb(139, 123, 92);
-  }
-
+  
   .logo-footer{
     display: none;
   }
@@ -1177,6 +1426,43 @@ video {
       font-weight: 400;
     }
 
+.hero-text{
+  h1{
+    font-size: 2.5rem;
+  }
+}
+.burger-menu-container {
+  grid-template-columns: 1fr 1fr;
+}
+.burger-container {
+  grid-template-columns: 1fr 1fr;
+}
+
+.product-card {
+  width: 100%;
+  margin: 0;
+  .prices {
+    height: 70%;
+    p {
+      height: 70%;
+      margin-left: 20px;
+    }
+  }
+  p {
+    font-size: 0.8rem;
+  }
+  .price-icon {
+     width: 30%;
+     font-size: 1.3rem;
+  }
+  .price-icon_secondary {
+    width: 30%;
+    line-height: 0.9;
+    font-size: 1rem;
+  }
+}
+}
+
     .price-container{
       p{
         margin-left: 0;
@@ -1195,15 +1481,158 @@ video {
         .burger-container {
           grid-template-columns: 1fr 1fr;
         }
-}}
+
+.special-offer {
+ 
+  justify-items: center;
+  .description {
+    display: grid;
+    width: 100%;
+    justify-items: center;
+    p {
+      width: 70%;
+      justify-self: center;
+      text-align: center;
+    }
+
+  }
+}
+
+
+
+
+}
+
 
 
 
 
 // Mobile page
 @media screen and (max-width: 780px) {
-  body {
-  background: rgb(92, 182, 119);
+  .special-offers {
+    grid-template-columns: 100%;
+    grid-template-rows: 50px 1fr 1fr 1fr;
+    width: 100%;
+    padding: 0;
+    .product-item {
+      grid-column: 1;
+      grid-row: unset;
+      width: 100%;
+      padding: 0;
+    }
+    .special-offer {
+      grid-column: 100%;
+      width: 100%;
+      padding: 0;
+    }
+    h2 {
+      grid-column: 1;
+    }
+    .menu-btn {
+      grid-column: 1;
+      grid-row: 5;
+    }
+  }
+  .burger-menu_item {
+    max-width: 100%;
+  }
+  .special-offer a {
+    display: grid;
+    grid-template-rows: 3;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    align-items: center;
+    width: 100%;
+    img {
+      grid-column: 1;
+      grid-row-start: 2;
+      grid-row-end: 3;
+      margin-left: -150px;
+      height: auto;
+      width: 230%;
+      max-width: 400px;
+    }
+    h4 {
+      grid-column: 2;
+      width: 100%;
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+    .description {
+      grid-column: 2;
+      grid-row: 2;
+      width: 100%;
+      p {
+        width: 90%;
+        justify-self: center;
+        text-align: left;
+        margin-left:40px;
+      }
+    }
+    .price-container {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+  }
+  .contact-page {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 7% 8% 18% 10%;
+    height: 100%;
+    width: 90%;
+    row-gap: 20px; 
+    padding: 0 5%;
+    .vertical {
+      display: none;
+    }
+    h3 {
+      font-size: 1.5rem;
+    font-weight: 400;
+    text-align: center;
+    }
+    .contact-intro {
+      grid-row: 2;
+      grid-column: 1;
+      width: 80%;
+    }
+    .contact-info {
+      grid-row: 3;
+      grid-column: 1;
+      justify-self: center;
+      margin: 0;
+    }
+    .contact-hours {
+      grid-row: 4;
+      grid-column: 1;
+      justify-self: center;
+      margin: 0;
+      display: grid;
+      grid-template-columns: 4;
+      grid-template-rows: 50px 1fr;
+      column-gap: 40px;
+      justify-items: center;
+      p {
+        grid-row: 2;
+      }
+      h3 {
+        grid-column-start: 2;
+        grid-column-end: 4;
+      }
+    }
+    iframe {
+      grid-row: 5;
+      grid-column: 1;
+      width: 100%;
+    }
+  }
+
+  .hide-on-mobile {
+    display: none;
+  }
+
+  h2{
+    font-size: 1.875rem;
+    font-weight: 400;
   }
 
 //main page 
@@ -1217,19 +1646,193 @@ header {
 
  }
 }
+
+
+.footer {
+  height: 500px !important;
+}
+
+.footer-container_box{
+  margin-bottom: 30px;
+}
+
+.product-card {
+  grid-template-columns: 100%;
+  grid-template-rows: 4;
+  width: 100%;
+  margin: 0;
+  h1 {
+    grid-row: 1;
+    grid-column: 1;
+    justify-self: center;
+  }
+  img {
+    grid-row: 2;
+    grid-column: 1;
+    margin: 0;
+    border-radius: 15px;
+    width: 95%;
+    justify-self: center;
+  }
+  .desc {
+    grid-row: 3;
+    grid-column: 1;
+    text-align: center;
+    padding: 20px;
+    width: 70%;
+    justify-self: center;
+    p{
+      font-size: 1rem;
+    }
+  }
+  .prices {
+    grid-row: 4;
+    grid-column: 1;
+    height: 70%;
+    padding: 20px;
+    p {
+      font-size: 1.1rem;
+    }
+  }
+  .price-icon {
+    font-size: 1.7rem;
+    display: flex;
+    justify-content: space-evenly;
+    width: 40%;
+  }
+  .price-icon_secondary {
+    display: flex;
+    justify-content: space-evenly;
+   line-height: 0.9;
+   font-size: 1.5rem;
+   width: 40%;
+  }
+  }
 .container {
-  padding:0;
+  padding: 0 ;
   margin: 0;
 }
 
 
+.hero {
+  flex-direction: row-reverse;
+  h1 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 0.875rem;
+  }
 }
+
+.hero-text {
+  margin-left: 3%;
+}
+
+.menu-btn-mobile {
+  margin: 50px auto;
+  margin-bottom: 150px;
+  
+  display: flex;
+  background: unset;
+  a {
+    max-width: 180px;
+    margin: 0 auto;
+    background: $red-cta;
+    padding: 1rem;
+    border-radius: 5px;
+  }
+}
+
+.special-offers-container {
+  grid-template-columns: unset;
+  grid-template-rows: repeat(3,1fr);
+  justify-content: space-around;
+  row-gap: 100px;
+}
+
+
+.hours-container {
+max-height: unset;
+display: grid !important;
+grid-template-columns: 1fr 1fr;
+grid-template-rows: 1fr 1fr;
+row-gap: 20px;
+}
+
+.opening-hours {
+  height: unset;
+  padding-bottom: 100px;
+}
+
+.selling-points{
+  height: unset;
+}
+
+.selling-points-container {
+  display: grid;
+  grid-template-columns: unset;
+  grid-template-rows: repeat(3,1fr);
+  justify-content: space-around;
+  row-gap: 150px;
+  height: unset;
+  max-height: unset;
+  :nth-child(2) {
+    img {
+      margin-left: 30px;
+    }
+  }
+}
+
+
+.adress-map {
+  margin: 0 auto;
+  margin-top: 145px;
+  width: 100%;
+  height: unset;
+  display: flex;
+  flex-direction: column;
+}
+
+.adress-map_left{
+  width: 90%;
+  margin: 0 auto;
+  max-width: unset;
+  h2 {
+    text-align: center;
+    margin-bottom: 50px !important;
+  }
+ 
+}
+
+}
+
+.adress-map_right{
+  display: flex;
+  width: 100%;
+  max-width: unset;
+  margin: 0 auto;
+    a {
+    text-align: center;
+  }
+  iframe {
+    width: 100%;
+    max-width: unset;
+    margin: 20px 5% 0 5%;
+min-height:300px
+
+  }
+}
+
+
+
+
+
+
 
 
 
 // Mobile 
 @media screen and (min-width: 780px) {
-  
 
 //main page
 
@@ -1237,7 +1840,16 @@ header {
  .mobile-nav {
    display: none;
  }
+
+ .hide-on-desktop{
+  display: none;
+ }
  
+ .adress-map_right {
+  iframe {
+    width: 100%;
+  }
+}
 
 }
 
@@ -1245,9 +1857,7 @@ header {
 
 
 @media screen and (max-width: 660px) {
-  body {
-  background: rgb(139, 123, 92);
-  }
+ 
 
 //main page
 
@@ -1261,7 +1871,147 @@ header {
   justify-items: center;
   row-gap: 3rem;
  }
+
+
+.add-options {
+  grid-template-columns: 1fr;
+}
+.burger-menu-container {
+  grid-template-columns: 1fr;
+  justify-items: center;
+  h2 {
+    grid-column: 1;
+  }
+}
+.content-single {
+  width: 100%;
+  padding: 0;
+}
+.menu-product-card {
+  display: grid;
+  background-color: $secondary-background;
+  border-radius: 15px;
+  margin-top: 20px;
+  justify-items: center;
+  h1 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  img {
+    border-radius: 15px;
+    width: 95%;
+    justify-self: center;
+  }
+   .prices {
+     margin: 20px;
+   }
+    .price-icon {
+      display: flex;
+      justify-content: space-evenly;
+    }
+  }
+
+
+ }
+
+@media screen and (max-width: 500px) {
+    .hero-text{
+      padding-right: 10px;
+      h1 {
+        font-size: 2rem;
+      }
+    }
+    }
+
+    @media screen and (max-width: 430px) {
+      .hero-text{
+        padding-right: 10px;
+        h1 {
+          font-size: 1.5rem;
+        }
+      }
+
+.dropdown-container_details {
+width: unset;
+}
+      .carousel-wrapper {
+       
+        P {
+          width: 100%;
+        }
+
+      }
+    }
+
+
+
+
+
+// hamburger  https://javascript.plainenglish.io/animated-hamburger-menu-in-vanilla-javascript-79bd97da00b9
+#hamburger-wrapper {
+  position: absolute;
+  right:50px;
+  top:35px;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.burger {
+  width: 25px;
+  position: relative;
+}
+
+.burger,
+.burger:before,
+.burger:after {
+  padding: 0;
+  background-color: black;
+  width: 100%;
+  height: 8px;
+  transition: margin .1s .2s, transform .2s;
+}
+
+.burger:before,
+.burger:after {
+  margin: 0;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.burger:before {
+  margin-top: -12px;
+}
+
+.burger:after {
+  margin-top: 12px;
+}
+
+/* STYLES FOR OUR BURGER WHEN THE MENU OPENS */
+.open .burger {
+  transform: rotate(45deg);
+}
+
+.open .burger,
+.open .burger:before,
+.open .burger:after {
+  transition: margin .2s, transform .1s .2s;
+}
+
+.open .burger:before,
+.open .burger:after {
+  margin-top: 0;
+}
+
+.open .burger:after {
+  transform: rotate(-90deg)
 }
 
 
 
+
+  

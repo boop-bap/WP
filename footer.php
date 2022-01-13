@@ -9,18 +9,30 @@
                 <p>+45 52 62 58 89</p>
             </div>
         </div>
-
+        <?php 
+        $timePosts = new WP_Query(array(
+            "post_type" => "time",
+            "posts-per-page" => 1
+        ));
+if ($timePosts->have_posts()) :
+    while ($timePosts->have_posts()) : $timePosts->the_post();
+    ?>
         <div class="footer-container_box">
             <h3>OPENING HOURS</h3>
-            <p>Mon - Thu 6-21</p>
+            <p>MON - WED: <?php the_field("mon-time") ?></p>
 
-            <p>Fri 6-21</p>
+            <p>THU: <?php the_field("fri-time") ?></p>
 
-            <p>Sat 6-21</p>
+            <p>FRI - SAT: <?php the_field("sat-time") ?></p>
 
-            <p>Sun 12-21</p>
+            <p>SUN: <?php the_field("sun-time") ?></p>
 
         </div>
+        <?php
+    endwhile;
+endif;
+wp_reset_postdata();
+         ?>
 
         <div class="footer-container_box">
             <h3>LINKS</h3>
@@ -29,9 +41,14 @@
             <a href="">About us</a>
             <a href="">Contact</a>
             <div class="footer-container_box__icons">
-                <i class="fab fa-facebook-square fa-2x "></i>
-                <i class="fab fa-instagram-square fa-2x"></i>
-                <i class="far fa-smile fa-2x"></i>
+                <a href="https://www.facebook.com/BurgerGO9000/">
+                    <i class="fab fa-facebook-square fa-2x "></i></a>
+                <a href="https://www.findsmiley.dk/Sider/Search.aspx?k=burger%20go%20aalborg"> <i
+                        class="far fa-smile fa-2x"></i>
+                </a>
+                <a href="https://www.instagram.com/">
+                    <i class="fab fa-instagram-square fa-2x"></i>
+                </a>
             </div>
         </div>
 
