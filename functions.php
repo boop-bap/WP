@@ -10,3 +10,13 @@ function test_theme_files() {
 }
 
 add_action('wp_enqueue_scripts', 'test_theme_files');
+
+function new_posts() {
+  register_post_type("time", array(
+    "public" => true,
+    "labels" => array(
+      "name" => "time"
+    )
+  ));
+}
+add_action("init","new_posts");
