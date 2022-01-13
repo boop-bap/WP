@@ -1507,7 +1507,7 @@ img {
 
 
 
-// Mobile 
+// Mobile page
 @media screen and (max-width: 780px) {
   .special-offers {
     grid-template-columns: 100%;
@@ -1635,7 +1635,7 @@ img {
     font-weight: 400;
   }
 
-//main page
+//main page 
 
 header {
   background: $yellow;
@@ -1643,6 +1643,7 @@ header {
   border-bottom-right-radius:15px;
  .desktop-nav {
    display: none;
+
  }
 }
 
