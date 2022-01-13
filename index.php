@@ -1,3 +1,5 @@
+<?php /* Template Name: Main Page */ ?>
+
 <?php get_header(); ?>
 
 <body>
@@ -11,8 +13,8 @@
 
             </div>
             <div class="hero-text">
-                <h1>Delicious<br> burgers to <span>GO</span> </h1>
-                <h3>Pick up your take-away, dine in at <span>Ved Stranden 11B</span> or get it delivered with our
+                <h1>Delicious<br> burgers to <span style="font-style:italic;">GO</span> </h1>
+                <h3>Come and taste our burgers at <span style="text-decoration: underline;">Ved Stranden 11B</span> or get it delivered with our
                     affiliates.</h3>
                 <div class="menu-btn hide-on-mobile ">
                     <a href="<?php echo site_url('/menu')?>">SEE THE MENU</a>
@@ -85,6 +87,7 @@ if ($timePosts->have_posts()) :
                 </div>
                 <div class="hours">
                     <p><?php the_field("sun-time") ?></p>
+
                     <p>SUN</p>
                 </div>
             </div>
@@ -125,32 +128,21 @@ wp_reset_postdata();
                 <div class="carousel">
 
                     <div class="carousel__photo initial">
-                        <p>"Average choice if you need a simple but tasty burger quickly. Various selection, menu
-                            options,
-                            very
-                            nice and friendly staff, with a quick service."</p>
-                        <p>Dora the explorer</p>
+                        <p>"De bedste brugere/pomfritter jeg længe har smagt! Hold nu fast en omgang lækkerhed. 
+                        Min mund løber helt i vand, blot ved at skrive denne anmeldelse.</p>
+                        <p>Niclas</p>
                     </div>
                     <div class="carousel__photo">
-                        <p>"Average choice if you need a simple but tasty burger quickly. Various selection, menu
-                            options,
-                            very
-                            nice and friendly staff, with a quick service."</p>
-                        <p>Dora he explorer</p>
+                        <p>"Uden tvivl mit favoritsted i Aalborg. Og helt sikkert Danmarks bedste burger. Giv det er forsøg! I vil ikke fortryde det 😍"</p>
+                        <p>Mustafe</p>
                     </div>
                     <div class="carousel__photo">
-                        <p>"Average choice if you need a simple but tasty burger quickly. Various selection, menu
-                            options,
-                            very
-                            nice and friendly staff, with a quick service."</p>
-                        <p>Dora the explorer</p>
+                        <p>"Super dejlig service, og simpel men fantastisk burger!"</p>
+                        <p>Caroline</p>
                     </div>
                     <div class="carousel__photo">
-                        <p>"Average choice if you need a simple but tasty burger quickly. Various selection, menu
-                            options,
-                            very
-                            nice and friendly staff, with a quick service."</p>
-                        <p>Dora the explorer</p>
+                        <p>"Efter at have boet i Aalborg i over 5 år, kan jeg med sikkerhed sige at BurgerGo er der, hvor har har haft de bedste burgeroplevelser. "</p>
+                        <p>Mads</p>
                     </div>
 
 
@@ -169,8 +161,8 @@ wp_reset_postdata();
         <section class="adress-map">
             <div class="adress-map_left">
                 <h2>FIND US IN THE CENTRE OF AALBORG</h2>
-                <p>Pick up your burgers as take-away or dine-in with us.
-                    Reservations are not neccessary.</p>
+                <p>You can pick up your take-away or dine-in with us. 
+                    We look forward to seeing you!</p>
                 <p>VED STRANDEN 11B
                     9000, AALBORG</p>
                 <p>+45 12 34 56 78</p>

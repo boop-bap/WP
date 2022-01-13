@@ -7,7 +7,7 @@
 
     <section class="about-introduction">
 
-        <h1>ABOUT US</h1>
+        <h1 class="about-us">ABOUT US</h1>
         <h2>Get a look inside Burger GO</h2>
         <video class="about-video" controls src=<?php echo get_theme_file_uri('./video/video.webm')?> type="video/webm"
             alt="special offer burger">
