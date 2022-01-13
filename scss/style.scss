@@ -586,6 +586,7 @@ footer {
   position: absolute;
   top:0;
   width: 100%;
+  height: 150px;
   padding: 1rem 4rem;
   z-index: 100;
   transition: transform .5s, opacity .5s, z-index .5s;
@@ -627,7 +628,7 @@ footer {
 .carousel__button--prev,
 .carousel__button--next {
   position: absolute;
-  top:50%;
+  top:10%;
   width: 3rem;
   height: 3rem;
   transform: translateY(-50%);
