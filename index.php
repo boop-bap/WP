@@ -62,30 +62,41 @@
             </div>
         </section>
 
-
+        <?php 
+        $timePosts = new WP_Query(array(
+            "post_type" => "time",
+            "posts-per-page" => 1
+        ));
+if ($timePosts->have_posts()) :
+    while ($timePosts->have_posts()) : $timePosts->the_post();
+    ?>
         <section class="opening-hours">
             <h2>OPENING HOURS</h2>
             <div class="hours-container">
                 <div class="hours">
-                    <p>12 - 21</p>
-                    <p>MON - THU</p>
+                    <p><?php the_field("mon-time") ?></p>
+                    <p>MON -THU</p>
                 </div>
                 <div class="hours">
-                    <p>12 - 06</p>
+                    <p><?php the_field("fri-time") ?></p>
                     <p>FRI</p>
                 </div>
                 <div class="hours">
-                    <p>12 - 03</p>
+                    <p><?php the_field("sat-time") ?></p>
                     <p>SAT</p>
                 </div>
                 <div class="hours">
-                    <p>12 - 21</p>
+                    <p><?php the_field("sun-time") ?></p>
+
                     <p>SUN</p>
                 </div>
             </div>
         </section>
-
-
+        <?php
+    endwhile;
+endif;
+wp_reset_postdata();
+         ?>
         <section class="selling-points">
             <h2>HIGH-QUALITY BURGERS FOR AN ATTRACTIVE PRICE</h2>
 
